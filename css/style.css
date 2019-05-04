@@ -469,54 +469,89 @@ body{
 }
 /*--//work--*/
 
-/*-- portfolio --*/
-.portfolio{
-	padding:4em 0;
-	background: #f6f6f6;
+
+
+    /*=====================================
+  PORTFOLIO STYLES 
+    ===================================*/
+
+#portfolio-sec {
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color: #ffffff;
-    cursor: default;
-    background: #ff9800;
-    border: solid 2px #ff9800;
+    #portfolio-sec i {
+        margin-right:5px;
+        color:#fff;
+        font-size:20px;
+    }
+    #portfolio-sec .col-xs-12.col-sm-4.col-md-3 {
+        padding: 0;
+    }
+
+.portfolio-sec-wrap {
+    position: relative;
+    cursor: pointer;
 }
-.nav-tabs > li > a {
-    margin-right: 3px;
+
+#portfolio-sec a:hover {
+    text-decoration: none;
+}
+
+.portfolio-sec-wrap img {
+    width: 100%;
+    height: 200px;
+}
+
+.portfolio-sec-wrap .portfolio-sec-inner {
+    top: 0;
+    background: transparent;
+    opacity: .8;
+    width: 100%;
     border-radius: 0;
-    font-size:1em;
-    color: #333333;
-	border: solid 2px #333333;
+    margin-bottom: 0;
 }
-.nav-tabs > li > a:focus{
-	background:transparent;
-}
-.nav-tabs {
-    border-bottom: none;
-    margin: 3em auto;
-    width: 34%;
-    text-align: center;
-}
-.nav-tabs > li {
-    margin: 0 10px;
-}
-.nav-tabs > li > a:hover {
-    color: #FFFFFF;
-    background: #ff9800;
-    border: solid 2px #ff9800;
-}
-.w3_tab_img_left h3 {
-    font-size: 1.5em;
+
+    .portfolio-sec-wrap .portfolio-sec-inner h3 {
+        margin: 10px 0;
+    }
+
+        .portfolio-sec-wrap .portfolio-sec-inner h3 a {
+            font-size: 24px;
+            color: #fff;
+        }
+
+.portfolio-sec-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0;
+    background-color: rgb(72, 72, 72);
     color: #fff;
-    margin: 0 0 .5em;
+    vertical-align: middle;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    padding: 30px;
 }
-.w3_tab_img_left p{
-	color:#fff;
-	line-height:2em;
+
+    .portfolio-sec-wrap .overlay .preview {
+        bottom: 0;
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 0;
+        background: transparent;
+        text-align: center;
+        color: #fff;
+    }
+
+.portfolio-sec-wrap:hover .overlay {
+    opacity: 1;
 }
-.w3_tab_img_left {
-    margin: 2em 0 0;
-}
-/*-- //portfolio --*/
 
 
 /*--project--*/
@@ -542,6 +577,7 @@ body{
 }
 .galry-grids img {
   width: 100%;
+
 }
 /*----- Strip -----*/
 .b-link-stripe{
@@ -990,6 +1026,8 @@ min-height: 400px;
 	.nav-tabs {
 		width: 70%;
 	}
+
+
 }
 .work-info h5 {
     font-size: 17px;
@@ -998,6 +1036,9 @@ min-height: 400px;
   .work-info h4 {
     font-size: 18px;
   }
+
+
+
 @media(max-width:736px){
 	#m_nav_menu {
 		right: 16px!important;
@@ -1012,6 +1053,11 @@ min-height: 400px;
 	#m_nav_container {
 		height: 230px !important;
 	}
+
+    #portfolio-sec {
+    padding-bottom: 0px;
+
+}
 }
 .work-left {
     padding: 1.5em 4em 0 0;

@@ -96,13 +96,10 @@ background-size: cover;*/
 .m_nav_ham_3_open {
     opacity: 0;
 }
-/*classes used to change the button's format based on jquery toggle
-In future releases this will be used to animate the m_nav_ham divs to form 
-an X*/
 
 .button_open {
     background: #fff;
-    /*	-webkit-transform: rotate(45deg);*/
+
 }
 .button_closed {}
 /*      Header
