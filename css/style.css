@@ -92,7 +92,7 @@ body {
 }
 
 .w3ls-banner-left-info p a:hover {
-    color: #FF9800;
+    color: #ec1944;
 }
 
 .w3ls-banner-left-info:nth-child(5) {
@@ -151,7 +151,7 @@ body {
     padding: .5em 2em;
     color: #ffffff !important;
     text-transform: uppercase;
-    background: #FF9800;
+    background: #ec1944;
     font-weight: 700 !important;
     text-decoration: none !important;
     line-height: initial !important;
@@ -421,24 +421,24 @@ body {
 }
 
 .skills-bar .bar_group__bar:nth-of-type(1) {
-    background: #ff9800;
+    background: #ec1944;
     z-index: 9990 !important;
 }
 
 .skills-bar .bar_group__bar:nth-of-type(2) {
-    background: #ff9800;
+    background: #ec1944;
 }
 
 .skills-bar .bar_group__bar:nth-of-type(3) {
-    background: #ff9800;
+    background: #ec1944;
 }
 
 .skills-bar .bar_group__bar:nth-of-type(4) {
-    background: #ff9800;
+    background: #ec1944;
 }
 
 .skills-bar .bar_group__bar:nth-of-type(5) {
-    background: #ff9800;
+    background: #ec1944;
 }
 
 .bar_group {
@@ -659,7 +659,7 @@ body {
 }
 
 .portfolio-sec-wrap:hover .overlay {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 
@@ -726,7 +726,7 @@ body {
     /* lt-ie9 */
 }
 
-img.img-responsive.glry-img {
+img.img-responsive {
     width: 100%;
 }
 
@@ -906,8 +906,8 @@ img.img-responsive.glry-img {
     font-weight: 600;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #FF9800;
-    border: 2px solid #ff9800;
+    background: #ec1944;
+    border: 2px solid #ec1944;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -946,7 +946,7 @@ img.img-responsive.glry-img {
 }
 
 .agileits-w3layouts-footer p a:hover {
-    color: #FF9800;
+    color: #ec1944;
 }
 
 
