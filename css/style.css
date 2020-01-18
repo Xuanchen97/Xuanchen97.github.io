@@ -441,6 +441,10 @@ body {
     background: #ec1944;
 }
 
+.skills-bar .bar_group__bar:nth-of-type(6) {
+    background: #ec1944;
+}
+
 .bar_group {
     position: relative;
 }
