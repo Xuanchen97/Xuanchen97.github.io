@@ -83,32 +83,20 @@ function nextPage(project) {
             window.open('./projects/d3map',
                 '_blank')
             break;
-        case "bluetootharduino":
-            window.open('./projects/arduinovacuum',
+        case "toolslibrary":
+            window.open('./projects/toolslibrary',
                 '_blank')
             break;
-        case "refugeevrexperience":
-            window.open('./projects/refugeevrexperience',
+        case "videointellignece":
+            window.open('./projects/videointellignece',
                 '_blank')
             break;
-        case "challengeforchange":
-            window.open('./projects/challengeforchange',
+        case "polarbeardip":
+            window.open('./projects/polarbeardip',
                 '_blank')
             break;
-        case "jackstones":
-            window.open('./projects/jackstones',
-                '_blank')
-            break;
-        case "radiothonbooth":
-            window.open('./projects/radiothonbooth',
-                '_blank')
-            break;
-        case "snapchatlenses":
-            window.open('./projects/snapchatlenses',
-                '_blank')
-            break;
-        case "ordrup":
-            window.open('./projects/ordrup',
+        case "uzooka":
+            window.open('./projects/uzooka',
                 '_blank')
             break;
     }
