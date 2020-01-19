@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Xuanchen Liu // Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <!-- bootstrap-css -->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <!-- font-awesome icons -->
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <!-- menu -->
+    <link rel="stylesheet" href="../css/projects.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <!-- //menu -->
+    <link rel="shortcut icon" href="../images/icon.png">
+</head>
+
+<body class="animated slow delay-1s fadeIn">
+    <script>
+        function backHome() {
+            window.location.href = "../"
+        }
+    </script>
+    <div class="row">
+        <div class="col-xl-3 col-lg-2">
+        </div>
+        <div class="col-xl-6 col-lg-8">
+            <h3 class="mt-5 mb-5" onclick="if (!window.__cfRLUnblockHandlers) return false; backHome()" style="cursor: pointer" data-cf-modified-7f1fd2ee9a34b074d5978574-=""><b>
+            <i class="fa fa-chevron-circle-left"></i></b> Go Back</h3>
+            <h2><b>Tools Inventor Management System</b></h2>
+            <p style="color: #aaaaaa">Oct 2019</p>
+            <p>The system was built for the Africa Rwanda community to manage several donated trade tools as Rell as manage Rorkspaces.</p>
+            <div style="width: inherit" class="text-center">
+                <img src="../images/toolslibrary/login.png" class="bigImage mt-0" style="width:100%;">
+            </div>
+            <h3 class="mt-3 mb-3"><b>Design Thinking</b></h3>
+            <p><b>How might we create a more approachable and engaging method of learning about
+social issues?</b></p>
+            <p>One of the problems we identified was that it's fairly difficult to spark a conversation and keep that conversation going through social media. Often times, people walk past a billboard/advertisement where the only call to action is to visit
+                a website. What if you were prompted to speak out and in turn receive information regarding a social issue while leaving your own personal mark?
+            </p>
+            <div style="width: inherit" class="text-center mb-5">
+                <img src="../images/promptu/Outdoor Ad Mockup.png" alt="mockup" class="bigImage">
+            </div>
+            <p><b>The User Experience</b></p>
+            <p>People who pass by a Promptu billboard (mural) will be invited to visit a website on their mobile device via short URL, NFC or QR code (for ease of access). On the mural, they will see a prompt such as "What's your favourite animal". Through
+                their phone, the user will be able to answer that question and in turn receive 3 drawings sourced from Google's Quickdraw dataset. Once they pick one of the three drawings, they will see their drawing pop up on the big screen with a fact
+                about the animal (at the moment, the fact shows on your phone). On your mobile screen, you will be invited to take action. The action can come in the form of an email subscription, online donations, visiting a website, signing a petition
+                + more. Once a mural becomes full of drawings, the screen will be captured and refreshed (to be stored on external website/social media).
+            </p>
+            <div style="width: inherit" class="text-center">
+                <img src="../images/promptu/Bus Stop MockUp.png" alt="mockup" class="bigImage">
+            </div>
+            <h3 class="mt-3 mb-3"><b>Next Steps</b></h3>
+            <p>We aim to enhance the user experience by integrating a social call to action. Ideally, the finished product would include an option to continue the conversation on social media by sharing the mural via Instagram, Facebook, Snapchat, etc. Utilizing
+                the <span style="color: #302368"><b>#ImpactfulPrompts </b></span>hashtag will generate a beautiful feed of unique murals categorized by topics.
+            </p>
+            <div style="width: inherit" class="text-center mb-5 mt-3">
+                <img src="../images/promptu/subway mockup.png" alt="mockup" class="bigImage">
+            </div>
+            <p>Due to the nature of natural language processing, we wouldn't be doing the technology justice if we didn't incorporate some kind of dialogue. In future iterations, our goal is to allow back and forth dialogue oriented around certain social
+                issues. An example of a prompt for this scenario would be "What do you know about child labour?" The user will then be able to engage in a diologue on their phone and even be able to control certain elements on the mural such as the environment
+                (cloudy and raining). This would be done by extracting key entities in the users speech such as position, physical objects, etc.
+            </p>
+            <h3 class="mt-3 mb-3"><b>My Role</b></h3>
+            <p>My Role in the hackathon was to make the magic happen (just kidding). I primarily worked on implementing the back-end API calls such as the Cloud Speech-to-Text API and the DialogFlow natural language processing. On the side, I also collaborated
+                with my team on implementing the Mobile client front-end.
+            </p>
+            <p></p>
+            <h3 class="mt-3 mb-3"><b>Technologies Used</b></h3>
+            <ul>
+                <li>Google DialogFlow</li>
+                <li>Node.js + Socket.io + various libraries</li>
+                <li>Google Quickdraw Dataset (AI)</li>
+                <li>P5.js</li>
+                <li>Google Speech-to-Text API</li>
+            </ul>
+            <h3 class="mt-3 mb-3"><b>View a live demo</b></h3>
+            <p><b>Instructions</b></p>
+            <ol class=pl-4>
+                <li>Open two separate browsers, one on your phone and one preferably on a desktop/laptop.
+                </li>
+                <li>On the desktop client, click 'Begin'. </li>
+                <li>Now on your phone, click the 'record' button and say your favorite animal (you can say however you would like).</li>
+                <li>To get a statistic and link on your phone, pick from the following animals (figure out which animals can be drawn):
+                    <ul>
+                        <li>Lion</li>
+                        <li>Rhino</li>
+                        <li>Sea turtle</li>
+                        <li>Shark</li>
+                        <li>Tiger</li>
+                    </ul>
+                </li>
+                <li>Pick one of the drawn animals and you should see it appear on the desktop (and be amazed).
+                </li>
+            </ol>
+            <p>
+            </p>
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-column mb-3">
+                    <p class="m-0 p-0">Mobile Client</p>
+                    <a href="https://speechtodrawhack.herokuapp.com">https://speechtodrawhack.herokuapp.com</a>
+                </div>
+                <div class="d-flex flex-column">
+                    <p class="m-0 p-0">Desktop Client</p>
+                    <a href="https://promptuhack.herokuapp.com">https://promptuhack.herokuapp.com</a>
+                </div>
+            </div>
+            <h3 class="mt-3 mb-3"><b>More mockups! (scroll right)</b></h3>
+            <div class="d-flex overflow-auto flex-nowrap scrollingView ">
+                <img src="../images/promptu/Web 1920 – 2.png" alt="mockup 1" class="col-md-6 col-sm-12 phoneMockup">
+                <img src="../images/promptu/Web 1920 – 5.png" alt="mockup 4" class="col-md-6 col-sm-12 phoneMockup">
+                <img src="../images/promptu/Web 1920 – 3.png" alt="mockup 2" class="col-md-6 col-sm-12 phoneMockup">
+                <img src="../images/promptu/Web 1920 – 4.png" alt="mockup 3" class="col-md-6 col-sm-12 phoneMockup">
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-2">
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="agileits-w3layouts-footer">
+        <div class="container">
+            <p>&copy; 2020 Jason Liu. All rights reserved.</p>
+
+        </div>
+    </div>
+    <!-- //copyright -->
+    <script src="../js/projects.js" charset="utf-8" type="7f1fd2ee9a34b074d5978574-text/javascript"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7f1fd2ee9a34b074d5978574-|49" defer=""></script>
+</body>
+
+</html>

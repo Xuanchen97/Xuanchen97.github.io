@@ -662,6 +662,10 @@ body {
     color: #fff;
 }
 
+.portfolio-sec-wrap .overlay .preview:hover {
+    color: #ec1944;
+}
+
 .portfolio-sec-wrap:hover .overlay {
     opacity: 0.9;
 }
