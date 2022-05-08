@@ -15,6 +15,18 @@
     <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+                function audioAutoPlay() {
+                    var audio_ = document.getElementById('audio')
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        audio_.play()
+                    }, false)
+                }
+                audioAutoPlay()
+            });
+    </script>
     <style type="text/css">
     </style>
 </head>
@@ -71,18 +83,13 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            function audioAutoPlay() {
-                var audio_ = document.getElementById('audio')
-                document.addEventListener("WeixinJSBridgeReady", function () {
-                    audio_.play()
-                }, false)
-            }
-            audioAutoPlay()
-        });
+
 
 
         (function () {
+
+
+
             var canvas = $('#canvas');
 
             if (!canvas[0].getContext) {
