@@ -14,7 +14,7 @@
     <script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
-
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <style type="text/css">
     </style>
 </head>
@@ -75,6 +75,16 @@
 
 
         (function () {
+
+            document.addEventListener('DOMContentLoaded', function () {
+                function audioAutoPlay() {
+                    var audio_ = document.getElementById('audio')
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        audio_.play()
+                    }, false)
+                }
+                audioAutoPlay()
+            });
 
             var canvas = $('#canvas');
 
