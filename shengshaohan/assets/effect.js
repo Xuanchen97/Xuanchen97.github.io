@@ -136,7 +136,7 @@ $('document').ready(function(){
 		loopSeven();
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#story').fadeIn('slow');
+			$('#cake_fadein').fadeIn('slow');
 		});
 	});	
 
@@ -214,9 +214,9 @@ $('document').ready(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
-				// $("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-				// 	$('.cake').fadeIn('fast');
-				// });
+				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
+					$('.cake').fadeIn('fast');
+				});
 
 				
 				
@@ -231,8 +231,8 @@ $('document').ready(function(){
 
 		msgLoop(0);
 		
-		$('#img').css("display","block")
-		$('#img').fadeIn('slow')
+		// $('#img').css("display","block")
+		// $('#img').fadeIn('slow')
 		
 	});
 });
