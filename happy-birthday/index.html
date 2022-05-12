@@ -12,7 +12,7 @@
 <!-- <![endif]-->
 
 <head>
-    <title>Happy Birthday</title>
+    <title>祝盛韶涵小朋友生日快乐！</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Happy Birthday">
     <meta name="robots" content="index, follow" />
@@ -39,7 +39,7 @@
 
 <body>
     <div class="loading"></div>
-    <audio class="song" controls loop>
+    <audio id = "audio" class="song" controls loop>
         <source src="assets/hbd.mp3">
         </source>
         Your browser isn't invited for super fun audio time.
@@ -91,14 +91,27 @@
                 <div class="bulb" id="bulb_orange"></div>
             </div>
         </div>
+        <img src="assets/xiaoge.jpg" width="100%" class="balloon-border">
+
         <div class="row">
             <div class="col-md-12 text-center">
                 <img src="assets/banner.png" class="bannar">
             </div>
         </div>
-        <!-- <div class="row message">
-        <div class="col-md-12"><p>Khushbu</p></div>
-    </div> -->
+
+
+
+        <div class="row message">
+
+        <div class="col-md-12">
+            <p><br>盛韶涵</p>
+            <p><br>生气快乐！</p>
+            <p><br>祝新的一岁里，学习进步</p>
+            <p><br>球技提升</p>
+            <p><br>孙策金标</p>
+        </div>
+
+        </div>
         <div class="row cake-cover">
             <div class="col-md-12 texr-center">
                 <div class="cake">
@@ -114,9 +127,8 @@
                 </div>
             </div>
         </div>
-        <div class="row message">
-            <div class="col-md-12" id="texts-container">
-            </div>
+        <div id="img" style="display: none;">
+            <img src="assets/xiaoge.jpg" width="100%">
         </div>
         <div class="navbar navbar-fixed-bottom">
             <div class="row">
@@ -127,8 +139,8 @@
                     <button class="btn btn-primary" id="balloons_flying">放飞气球</button>
                     <!-- <button class="btn btn-primary" id="cake_fadein">上蛋糕</button>
                     <button class="btn btn-primary" id="light_candle"> 点蜡烛</button> -->
-                    <button class="btn btn-primary" id="wish_message">生日快乐！盛韶涵！</button>
-                    <button class="btn btn-primary" id="story">留言</button>
+                    <!-- <button class="btn btn-primary" id="wish_message">生日快乐！盛韶涵！</button> -->
+                    <button class="btn btn-primary" id="story">生日快乐！盛韶涵！</button>
                     <!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
                 </div>
             </div>

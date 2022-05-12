@@ -120,7 +120,7 @@ $('document').ready(function(){
 		loopSeven();
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#cake_fadein').fadeIn('slow');
+			$('#story').fadeIn('slow');
 		});
 	});	
 
@@ -165,11 +165,32 @@ $('document').ready(function(){
 	});
 	
 	$('#story').click(function(){
+		vw = $(window).width()/2;
+
+		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
+		$('#b1').attr('id','b11');
+		$('#b2').attr('id','b22')
+		$('#b3').attr('id','b33')
+		$('#b4').attr('id','b44')
+		$('#b5').attr('id','b55')
+		$('#b6').attr('id','b66')
+		$('#b7').attr('id','b77')
+		$('#b11').animate({top:240, left: vw-350},500);
+		$('#b22').animate({top:240, left: vw-250},500);
+		$('#b33').animate({top:240, left: vw-150},500);
+		$('#b44').animate({top:240, left: vw-50},500);
+		$('#b55').animate({top:240, left: vw+50},500);
+		$('#b66').animate({top:240, left: vw+150},500);
+		$('#b77').animate({top:240, left: vw+250},500);
+		$('.balloons').css('opacity','0.9');
+		$('.balloons h2').fadeIn(3000);
+
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-		
+	
+
 		var i;
 
 		function msgLoop (i) {
@@ -189,8 +210,10 @@ $('document').ready(function(){
 		});
 			// body...
 		}
-		
+
 		msgLoop(0);
+		$('#img').css("display","block")
+		$('#img').fadeIn('slow')
 		
 	});
 });
