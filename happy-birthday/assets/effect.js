@@ -29,8 +29,21 @@ $('document').ready(function(){
 		});
 	});
 	$('#play').click(function(){
-		var audio = $('.song')[0];
-        audio.play();
+		// var audio = $('.song')[0];
+        // audio.play();
+
+
+		document.addEventListener('DOMContentLoaded', function () {
+			function audioAutoPlay() {
+				var audio_ = document.getElementById('audio')
+				document.addEventListener("WeixinJSBridgeReady", function () {
+					audio_.play()
+				}, false)
+			}
+			audioAutoPlay()
+		});
+
+
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');

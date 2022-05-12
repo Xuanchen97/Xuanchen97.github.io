@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-md-6 text-center col-md-offset-3">
                     <button class="btn btn-primary" id="turn_on">开灯</button>
-                    <button class="btn btn-primary" id="play">奏乐</button>
+                    <!-- <button class="btn btn-primary" id="play">奏乐</button> -->
                     <button class="btn btn-primary" id="bannar_coming">舞起来</button>
                     <button class="btn btn-primary" id="balloons_flying">放飞气球</button>
                     <!-- <button class="btn btn-primary" id="cake_fadein">上蛋糕</button>
@@ -156,15 +156,7 @@
 <script src="custom.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        function audioAutoPlay() {
-            var audio_ = document.getElementById('audio')
-            document.addEventListener("WeixinJSBridgeReady", function () {
-                audio_.play()
-            }, false)
-        }
-        audioAutoPlay()
-    });
+
 </script>
 
 </html>
