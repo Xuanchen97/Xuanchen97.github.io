@@ -29,8 +29,8 @@ $('document').ready(function(){
 		});
 	});
 	$('#play').click(function(){
-		// var audio = $('.song')[0];
-        // audio.play();
+		var audio = $('.song')[0];
+        audio.play();
 		var audio_ = document.getElementById('audio')
 		document.addEventListener("WeixinJSBridgeReady", function () {
 			audio_.play()
