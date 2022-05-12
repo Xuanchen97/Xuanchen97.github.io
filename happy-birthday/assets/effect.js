@@ -29,8 +29,8 @@ $('document').ready(function(){
 		});
 	});
 	$('#play').click(function(){
-		var audio = $('.song')[0];
-        audio.play();
+		// var audio = $('.song')[0];
+        // audio.play();
 		var audio_ = document.getElementById('audio')
 		document.addEventListener("WeixinJSBridgeReady", function () {
 			audio_.play()
@@ -136,7 +136,7 @@ $('document').ready(function(){
 		loopSeven();
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#cake_fadein').fadeIn('slow');
+			$('#story').fadeIn('slow');
 		});
 	});	
 
@@ -215,8 +215,10 @@ $('document').ready(function(){
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					$('.cake').fadeIn('fast');
+					$('#img').css("display","block")
+					$('#img').fadeIn('slow')
 				});
+				
 			}
 			else{
 				msgLoop(i);
@@ -228,8 +230,7 @@ $('document').ready(function(){
 
 		msgLoop(0);
 		
-		// $('#img').css("display","block")
-		// $('#img').fadeIn('slow')
+
 		
 	});
 });
