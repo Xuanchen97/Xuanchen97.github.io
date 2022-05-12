@@ -212,6 +212,7 @@ $('document').ready(function(){
 		}
 
 		msgLoop(0);
+		
 		$('#img').css("display","block")
 		$('#img').fadeIn('slow')
 		
