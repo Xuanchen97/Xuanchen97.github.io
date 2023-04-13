@@ -190,7 +190,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #ffffff;
+    background: #cecece;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -988,8 +988,9 @@ img.img-responsive {
 
 @media(max-width:1440px) {
     #m_nav_menu {
-        right: 140px!important;
+        right: 140px !important;
     }
+
     .nav-tabs {
         width: 38%;
     }
@@ -997,8 +998,9 @@ img.img-responsive {
 
 @media(max-width:1366px) {
     #m_nav_menu {
-        right: 105px!important;
+        right: 105px !important;
     }
+
     .experience {
         padding: 80px 0px;
     }
@@ -1006,8 +1008,9 @@ img.img-responsive {
 
 @media(max-width:1280px) {
     #m_nav_menu {
-        right: 61px!important;
+        right: 61px !important;
     }
+
     .nav-tabs {
         width: 43%;
     }
@@ -1017,43 +1020,55 @@ img.img-responsive {
     .nav-tabs {
         width: 51%;
     }
+
     .m_nav_item a {
         font-weight: 600 !important;
     }
+
     #m_nav_container {
         text-align: center !important;
         box-shadow: 0 0 2px #000 !important;
     }
+
     #m_nav_list {
         margin: 0.5em 0 0 0 !important;
     }
+
     .nav-tabs {
         margin: 1em auto;
     }
+
     .work-info h4 {
         font-size: 1.2em;
     }
+
     .work-left {
         padding: 1.5em 5em 0 0;
     }
+
     .work-right {
         padding: 1em 0 2em 6em;
     }
+
     .work-info h4 {
         font-size: 1.1em;
         padding: .58em 1.2em;
     }
+
     .work-info p {
         padding: 10px;
     }
+
     .work-info h5 {
         font-size: 1.2em;
         padding: 0 1em;
     }
+
     .work-info h4:before {
         right: -12px;
         border-width: 9px 0 9px 14px;
     }
+
     .work-right.work-right2 h4:before {
         left: -12px;
     }
@@ -1092,11 +1107,13 @@ img.img-responsive {
 
 @media(max-width:1024px) {
     #m_nav_menu {
-        right: 33px!important;
+        right: 33px !important;
     }
+
     .nav-tabs {
         width: 54%;
     }
+
     .experience {
         padding: 70px 0px;
     }
@@ -1106,88 +1123,112 @@ img.img-responsive {
     .w3ls-banner-left {
         width: 35%;
     }
+
     .w3ls-banner-right {
         width: 65%;
     }
+
     .banner-right-img {
         float: none;
         width: 35%;
     }
+
     .banner-right-info {
         float: none;
         width: 100%;
         margin: 1em 0 0 0;
     }
+
     .w3-button {
         margin: 1em 0 0 0;
     }
+
     .social-info {
         float: left;
         width: 30%;
     }
+
     #m_nav_menu {
-        right: 120px!important;
+        right: 120px !important;
     }
+
     .wthree-about-right {
         margin: 2em 0 0 0;
     }
+
     .statistics-grid2:before {
         left: -38px;
     }
+
     .statistics-grid2:after {
         right: -38px;
     }
+
     .experience-grid {
         border-right: none;
     }
+
     .experience-grid2 {
         border-bottom: solid 1px #999999 !important;
     }
+
     .m_nav_item a {
         font-size: 1em !important;
     }
+
     .feedback-grids {
         width: 100%;
     }
+
     .feedback-top:after {
         left: 10%;
     }
+
     .w3_tab_img_left {
         float: left;
         width: 25%;
     }
+
     .styled-input {
         width: 48%;
     }
+
     .work-right.work-right2 {
         min-height: 246px;
     }
+
     .work-left {
         padding: 2.5em 4em 0 0;
         float: left;
         width: 50%;
     }
+
     .work-right {
         padding: 2em 0 0.5em 5.8em;
         float: right;
         width: 50%;
     }
+
     .work-info h5 {
         font-size: 1.2em;
         padding: 0 1em;
     }
+
     .work-left2 h5 span.fa {
         margin-left: 3.4em;
         margin-right: -6.4em;
     }
+
     .work-right h5 span.fa {
         margin-right: 3.7em;
     }
+
     .work-info h4:before {
         right: -7px;
         border-width: 7px 0 7px 12px;
         top: 12px;
     }
+
     .work-right.work-right2 h4:before {
         left: -7px;
     }
@@ -1195,8 +1236,9 @@ img.img-responsive {
 
 @media(max-width:800px) {
     #m_nav_menu {
-        right: 31px!important;
+        right: 31px !important;
     }
+
     .nav-tabs {
         width: 70%;
     }
@@ -1213,18 +1255,22 @@ img.img-responsive {
 
 @media(max-width:736px) {
     #m_nav_menu {
-        right: 16px!important;
+        right: 16px !important;
     }
+
     .agile-statistics-grid {
         float: left;
         width: 33.33%;
     }
+
     .nav-tabs {
         width: 71%;
     }
+
     #m_nav_container {
         height: 230px !important;
     }
+
     #portfolio-sec {
         padding-bottom: 0px;
     }
@@ -1240,127 +1286,131 @@ img.img-responsive {
 
 
 }
+
 @media(max-width:667px) {
     .social-info {
         width: 35%;
     }
-    
+
     .nav-tabs>li {
         margin: 0 4px;
     }
-    
+
     .w3_tab_img_left {
         width: 50%;
     }
 }
+
 @media(max-width:640px) {
     .nav-tabs {
         width: 73%;
     }
-    
+
     .work-right {
         padding: 1em 0 0.5em 4em;
     }
-    
+
     .work-info h5 {
         padding-left: 35px;
     }
-    
+
     .work-left {
         padding: 1.5em 4em 0 0;
     }
-    
+
     .work-right.work-right2 {
         min-height: 295px;
     }
-    
+
     .work-right h5 span.fa {
         margin-right: 2.7em;
     }
-    
+
     .experience {
         padding: 65px 0px;
     }
 }
+
 @media(max-width:568px) {
     .social-info {
         width: 40%;
     }
-    
+
     .agile-statistics-grid p {
         font-size: .9em;
         letter-spacing: 0px;
     }
-    
+
     .statistics-grid2:before {
         left: -28px;
         width: 32%;
     }
-    
+
     .statistics-grid2:after {
         right: -28px;
         width: 32%;
     }
-    
+
     .experience-grid {
         padding: 2em 0;
     }
-    
+
     .nav-tabs {
         width: 84%;
     }
-    
+
     .work-info h4 {
         font-size: 18px;
         padding: .599em 1.2em;
         font-weight: 700;
     }
-    
+
     .work-left {
         padding: 1.35em 4em 0 0;
     }
-    
+
     .work-info p {
         font-size: 13.5px;
     }
-    
+
     .work-right.work-right2 {
         min-height: 268px;
     }
-    
+
     .experience {
         padding: 60px 0px;
     }
 }
+
 @media(max-width:480px) {
     .banner-right-img {
         width: 45%;
     }
-    
+
     .w3ls-banner-left {
         float: none;
         width: 100%;
         margin: 1em 0 0 0;
     }
-    
+
     .w3ls-banner-right {
         width: 100%;
         float: none;
     }
-    
+
     .banner-right-img {
         width: 36%;
         margin: 0 auto;
     }
-    
+
     .w3l-banner-grids {
         margin: 2em 0 0 0;
     }
-    
+
     .banner {
         padding: 1em 0 2em;
     }
-    
+
     .about,
     .statistics,
     .experience,
@@ -1369,239 +1419,244 @@ img.img-responsive {
     .contact {
         padding: 2em 0;
     }
-    
+
     .about h3 {
         text-align: center;
     }
-    
+
     .agile-statistics-grid {
         float: none;
         width: 100%;
     }
-    
+
     .statistics-grid2 {
         position: relative;
         margin: 6em 0;
     }
-    
+
     .statistics-grid2:before {
         left: 216px;
         width: 2px;
         height: 65px;
         top: -77px;
     }
-    
+
     .statistics-grid2:after {
         right: 215px;
         width: 2px;
         height: 65px;
         top: 200px;
     }
-    
+
     .nav-tabs>li>a {
         padding: 5px 8px;
     }
-    
+
     .work-left {
         float: none;
         width: 100%;
         text-align: left;
         padding: 1.35em 0em 0 0px;
     }
-    
+
     .work-right {
         float: none;
         width: 100%;
         border-left: none;
         padding: 1em 0 0em 0em;
     }
-    
+
     .work-right h5 span.fa {
         margin-right: 1.3em;
         margin-left: 0em;
     }
-    
+
     .work-left2 h5 span.fa {
         margin-left: 1.4em;
     }
-    
+
     .work-info h5 {
         padding-left: 20px;
     }
-    
+
     .work-right.work-right2 {
         min-height: 0;
     }
-    
+
     .work-info li {
         line-height: 30px;
         padding: 20px;
     }
-    
+
     .work-info h4 {
         padding: 20px;
     }
-    
+
     .work-right.work-right2 h4:before {
         left: 4px;
     }
-    
+
     .work-info h4:before {
         display: none;
     }
-    
+
     .banner-right-info h2 {
         font-size: 1.0em;
     }
 }
+
 @media(max-width:414px) {
+
     .wthree-about-left h3,
     .wthree-about-right h3,
     .w3-agileits-statistics-heading h3 {
         font-size: 1.5em;
     }
-    
+
     .agile-statistics-grids {
         margin: 2em 0 0 0;
     }
-    
+
     .statistics-grid2:before {
         left: 183px;
     }
-    
+
     .statistics-grid2:after {
         right: 183px;
     }
-    
+
     .w3-agile-experience-grids {
         margin: 0em 0 0 0;
     }
-    
+
     .experience-grid {
         padding: 1em 0;
     }
-    
+
     .nav-tabs {
         width: 95%;
     }
-    
+
     .nav-tabs {
         margin: 1em auto 0;
     }
-    
+
     .map-grid iframe {
         height: 200px;
     }
-    
+
     .styled-input {
         width: 100%;
     }
-    
+
     .styled-input {
         margin: 1em 0em;
     }
-    
+
     .styled-input.agile-styled-input-top {
         margin-top: 1em;
     }
-    
+
     .m_nav_ham {
         width: 25px !important;
         height: 2px !important;
     }
-    
+
     .m_nav_ham_2_open {
         margin-top: -7px !important;
     }
-    
+
     .m_nav_ham_1_open {
         margin-top: 11px !important;
     }
 }
+
 @media(max-width:384px) {
     .statistics-grid2:before {
         left: 170px;
     }
-    
+
     .statistics-grid2:after {
         right: 170px;
     }
-    
+
     .nav-tabs>li>a {
         font-size: .87em;
     }
-    
+
     .contact-form {
         margin: 2em 0 0 0;
     }
-    
+
     .work-info p {
         font-size: 13px;
     }
-    
+
     .work-info p {
         line-height: 28px;
     }
-    
+
     .work-info h4 {
         font-size: 15px;
     }
 }
+
 @media(max-width:375px) {
     .statistics-grid2:before {
         left: 162px;
     }
-    
+
     .nav-tabs>li {
         margin: 3px 4px;
     }
-    
+
     .w3_tab_img_left {
         width: 100%;
         margin: 1em 0 0 0;
     }
-    
+
     .work-info h5 {
         font-size: 16.5px;
     }
 }
+
 @media(max-width:320px) {
     .agile-logo {
         width: 40%;
     }
-    
+
     .agile-logo h1 a {
         font-size: .3em;
     }
-    
+
     .agile-logo h1 a span {
         font-size: 2.3em !important;
     }
-    
+
     .banner-right-img {
         width: 60%;
     }
-    
+
     .w3ls-banner-right {
         padding: 0;
     }
-    
+
     .social-info {
         width: 100%;
         float: none;
         margin-bottom: 1em;
     }
-    
+
     .agileinfo-social-grids {
         float: none;
         margin: 0;
         width: 100%;
     }
-    
+
     .w3ls-banner-left {
         padding: 0;
     }
-    
+
     .agile-statistics-grid i.fa.fa-desktop,
     .agile-statistics-grid i.fa.fa-user,
     .agile-statistics-grid i.fa.fa-trophy {
@@ -1609,16 +1664,16 @@ img.img-responsive {
         height: 80px;
         padding: 1.2em 0 0 0;
     }
-    
+
     .statistics-grid2:before {
         left: 135px;
     }
-    
+
     .statistics-grid2:after {
         right: 135px;
         top: 181px;
     }
-    
+
     .experience-grid-icon i.fa.fa-folder-open,
     .experience-grid-icon i.fa.fa-bell,
     .experience-grid-icon i.fa.fa-comments,
@@ -1627,19 +1682,19 @@ img.img-responsive {
         height: 80px;
         padding: .7em 0 0 0;
     }
-    
+
     .work-info h5 {
         font-size: 16px;
     }
-    
+
     .work-info h4 {
         font-size: 14.5px;
     }
-    
+
     .work-info h4:before {
         border-width: 7px 0 7px 11px;
     }
-    
+
     .experience {
         padding: 50px 0px;
     }
