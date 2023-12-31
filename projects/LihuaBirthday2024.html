@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,8 @@
     <style>
         body {
             font-family: 'Indie Flower', cursive !important;
-            background: #FDE3A7; /*CAPE HONEY*/
+            background: #FDE3A7;
+            /*CAPE HONEY*/
             margin: 0px;
             padding: 0px;
         }
@@ -22,15 +24,18 @@
         }
 
         .color1 {
-            color: #1BBC9B; /*MOUNTAIN MEADOW*/
+            color: #1BBC9B;
+            /*MOUNTAIN MEADOW*/
         }
 
         .color2 {
-            color: #C0392B; /*TALL POPPY*/
+            color: #C0392B;
+            /*TALL POPPY*/
         }
 
         .card {
-            color: #013243; /*SHERPA BLUE*/
+            color: #013243;
+            /*SHERPA BLUE*/
             position: absolute;
             top: 50%;
             left: 50%;
@@ -104,38 +109,63 @@
         .text-right {
             text-align: right;
         }
+
+        .prompt {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: #013243;
+            /* Adjust color as needed */
+            cursor: pointer;
+            font-family: 'Indie Flower', cursive;
+            transition: opacity 0.5s ease;
+        }
+
+        .card.clicked .prompt {
+            opacity: 0;
+            /* Make the prompt disappear when the card is clicked */
+            pointer-events: none;
+            /* Ensures that the text is not clickable after disappearing */
+        }
     </style>
 </head>
+
 <body>
 
-<div class="card">
-    <div class="imgBox">
-        <div class="bark"></div>
-        <img src="../images/birthday2024.png" alt="Birthday">
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="../images/birthday2024.png" alt="Birthday">
+        </div>
+        <div class="details">
+            <h4 class="color1">李华妈妈&老板&女士：</h4>
+            <h4 class="color2 margin">♥生日快乐！！！</h4>
+            <p>妈,</p>
+            <p>生日快乐！</p>
+            <p>愿您的每一天都充满健康和快乐</p>
+            <p>&nbsp;每天都过得平安喜乐</p>
+            <p>&nbsp;&nbsp;感谢您的付出与关爱</p>
+            <p>&nbsp;&nbsp;您的智慧永远是我们前行的灯塔！</p>
+            <br>
+            <p class="text-right">爱你的孩子们</p>
+            <p class="text-right">♥淇♥涵♥辰</p>
+        </div>
+        <div class="prompt">点击翻页</div>
     </div>
-    <div class="details">
-        <h4 class="color1">李华妈妈&老板&女士：</h4>
-        <h4 class="color2 margin">♥生日快乐！！！</h4>
-        <p>妈,</p>
-        <p>生日快乐！</p>
-        <p>愿您的每一天都充满健康和快乐</p>
-        <p>&nbsp;每天都过得平安喜乐</p>
-        <p>&nbsp;&nbsp;感谢您的付出与关爱</p>
-        <p>&nbsp;&nbsp;您的智慧永远是我们前行的灯塔！</p>
-        <br>
-        <p class="text-right">爱你的孩子们</p>
-        <p class="text-right">♥淇♥涵♥辰</p>
-    </div>
-</div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var card = document.querySelector('.card');
-        card.addEventListener('click', function() {
-            card.classList.toggle('clicked');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var card = document.querySelector('.card');
+            card.addEventListener('click', function () {
+                card.classList.toggle('clicked');
+                // Optionally hide the prompt on the first click
+                this.querySelector('.prompt').style.opacity = 0;
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>
