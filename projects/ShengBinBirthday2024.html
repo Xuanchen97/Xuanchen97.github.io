@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="../images/birthday2024.png" />
+
+    <!-- WeChat specific meta tags -->
+    <meta name="og:title" content="斌哥，生日快乐！生日快乐！2024" />
+    <meta name="og:image" content="../images/binge2024.gif" />
+    <meta name="og:description" content="斌哥，生日快乐！2024" />
+    <title>斌哥，生日快乐！2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: '微软雅黑', '宋体', sans-serif;
+            background: #FDE3A7;
+            /*CAPE HONEY*/
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        h4 {
+            font-size: 26px;
+            line-height: 1px;
+            font-family: '黑体', 'Heiti', sans-serif;
+        }
+
+        .color1 {
+            color: #181818;
+            /*MOUNTAIN MEADOW*/
+        }
+
+        .color2 {
+            color: #0544c1;
+            /*TALL POPPY*/
+        }
+
+        .card {
+            color: #013243;
+            /*SHERPA BLUE*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 400px;
+            background: #e0e1dc;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) perspective(2000px);
+            box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+            transition: 1s;
+        }
+
+        .card.clicked {
+            transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+            box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+        }
+
+        .card.clicked .imgBox {
+            transform: rotateY(-135deg);
+        }
+
+        .card.clicked .bark {
+            opacity: 1;
+            box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+        }
+
+        .imgBox {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition: .7s;
+        }
+
+        .bark {
+            position: absolute;
+            background: #e0e1dc;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: .7s;
+        }
+
+        .imgBox img {
+            min-width: 250px;
+            max-height: 400px;
+            width: 100%;
+        }
+
+        .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 0 0 0 10px;
+            z-index: -1;
+            margin-top: 70px;
+        }
+
+        .details p {
+            font-size: 15px;
+            line-height: 5px;
+            transform: rotate(-10deg);
+            padding: 0 0 0 20px;
+            font-family: '楷体', 'Kaiti', serif;
+        }
+
+        .details h4 {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .prompt {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: #013243;
+            /* Adjust color as needed */
+            cursor: pointer;
+            font-family: 'Indie Flower', cursive;
+            transition: opacity 0.5s ease;
+        }
+
+        .card.clicked .prompt {
+            opacity: 0;
+            /* Make the prompt disappear when the card is clicked */
+            pointer-events: none;
+            /* Ensures that the text is not clickable after disappearing */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="../images/binge2024.gif" alt="Birthday">
+        </div>
+        <div class="details">
+            <h4 class="color1">斌哥爸比：</h4>
+            <h4 class="color2 margin"><i class="fa-solid fa-handshake"></i> 生日快乐！！！</h4>
+            <p>祝爸生日快乐，</p>
+            <p>感恩给予，</p>
+            <p>愿你继续在未来的日子里，</p>
+            <p>健康快乐，</p>
+            <p>平安顺遂！</p>
+            <p>“旦逢良辰，顺颂时宜” — 《诗经》</p>
+            <br>
+            <p class="text-right">爱你的孩子们</p>
+            <p class="text-right">♥淇♥涵♥辰</p>
+            <p class="text-right">2024/01/21</p>
+        </div>
+        <div class="prompt">点击翻页</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var card = document.querySelector('.card');
+            card.addEventListener('click', function () {
+                card.classList.toggle('clicked');
+                // Optionally hide the prompt on the first click
+                this.querySelector('.prompt').style.opacity = 0;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
