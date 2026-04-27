@@ -775,6 +775,26 @@ section { padding: 100px 0; }
 }
 
 /* ========================================
+   PROJECTS - FEATURED (REVERSED)
+   ======================================== */
+.featured-project.featured-reverse .featured-content {
+  order: -1;
+  text-align: left;
+}
+
+.featured-project.featured-reverse .featured-img {
+  order: 1;
+}
+
+.featured-project.featured-reverse .featured-tags {
+  justify-content: flex-start;
+}
+
+.featured-project.featured-reverse .featured-links {
+  justify-content: flex-start;
+}
+
+/* ========================================
    PROJECTS - GRID
    ======================================== */
 .other-projects-heading {
