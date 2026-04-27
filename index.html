@@ -80,18 +80,37 @@
 
     <!-- ===== HERO ===== -->
     <section id="hero">
-      <p class="hero-intro">Hi, my name is</p>
-      <h1 class="hero-name">Jason Liu.</h1>
-      <h2 class="hero-tagline">I build data-driven solutions.</h2>
-      <p class="hero-desc">
-        I'm a solutions developer based in Canada with 5+ years of experience across clinical data systems,
-        full-stack applications, and ETL pipelines. Currently at
-        <a href="#experience" class="inline-link">Hamilton Health Sciences (PHRI)</a>,
-        building tools that support population health research.
-      </p>
-      <div class="hero-cta">
-        <a href="resume/Jason_Liu_Resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
-        <a href="#projects" class="btn-secondary">View My Work</a>
+      <div class="hero-left">
+        <p class="hero-intro">Hi, my name is</p>
+        <h1 class="hero-name">Jason Liu.</h1>
+        <h2 class="hero-tagline">I build data-driven solutions.</h2>
+        <p class="hero-desc">
+          I'm a solutions developer based in Canada with 5+ years of experience across clinical data systems,
+          full-stack applications, and ETL pipelines. Currently at
+          <a href="#experience" class="inline-link">Hamilton Health Sciences (PHRI)</a>,
+          building tools that support population health research.
+        </p>
+        <div class="hero-cta">
+          <a href="resume/Jason_Liu_Resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
+          <a href="#projects" class="btn-secondary">View My Work</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+            </div>
+            <span class="terminal-fname">career_log.sql</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-code" id="termCode"></div>
+            <div class="terminal-results" id="termResults"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -421,6 +440,121 @@
         document.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
       });
     });
+
+    // ── Terminal animation ──────────────────────────────
+    (function () {
+      const SQL = [
+        { t: '-- Jason Liu · career summary',    c: '#6272a4' },
+        { t: 'SELECT',                           c: '#64ffda' },
+        { t: '  role,',                          c: '#ccd6f6' },
+        { t: '  yrs,',                           c: '#ccd6f6' },
+        { t: '  SUM(yrs) OVER (',               c: '#bd93f9' },
+        { t: '    ORDER BY start_yr',            c: '#64ffda' },
+        { t: '    ROWS UNBOUNDED PRECEDING',     c: '#64ffda' },
+        { t: '  )          AS exp_cumul,',       c: '#ccd6f6' },
+        { t: '  DENSE_RANK() OVER (',           c: '#bd93f9' },
+        { t: '    ORDER BY tech_count DESC',     c: '#64ffda' },
+        { t: '  )          AS complexity',       c: '#ccd6f6' },
+        { t: 'FROM career_log',                  c: '#64ffda' },
+        { t: 'ORDER BY start_yr;',              c: '#64ffda' },
+      ];
+
+      const ROWS = [
+        ['Tech R&D',   '1.0',  '1.0',  '3'],
+        ['Full-Stack', '2.5',  '3.5',  '1'],
+        ['Solutions',  '2.7+', '6.2+', '2'],
+      ];
+
+      const wait = ms => new Promise(r => setTimeout(r, ms));
+
+      async function runTerminal() {
+        const codeEl    = document.getElementById('termCode');
+        const resultsEl = document.getElementById('termResults');
+        if (!codeEl || !resultsEl) return;
+
+        while (true) {
+          codeEl.innerHTML    = '';
+          resultsEl.innerHTML = '';
+          resultsEl.style.display = 'none';
+
+          // Add blinking cursor element
+          const cursor = document.createElement('span');
+          cursor.className = 'term-cursor';
+          codeEl.appendChild(cursor);
+
+          // Type each SQL line
+          for (const line of SQL) {
+            const lineEl = document.createElement('span');
+            lineEl.className = 'term-line';
+            lineEl.style.color = line.c;
+            codeEl.insertBefore(lineEl, cursor);
+
+            for (const ch of line.t) {
+              lineEl.textContent += ch;
+              await wait(20 + Math.random() * 14);
+            }
+            await wait(55);
+          }
+
+          // Running indicator
+          cursor.remove();
+          await wait(250);
+          const runEl = document.createElement('span');
+          runEl.className = 'term-line term-running';
+          runEl.textContent = '> Executing...';
+          codeEl.appendChild(runEl);
+          await wait(750);
+          runEl.textContent = '> Done';
+          runEl.className = 'term-line term-done';
+
+          // Show results table
+          await wait(180);
+          resultsEl.style.display = 'block';
+
+          const header = document.createElement('div');
+          header.className = 'term-result-header';
+          ['role', 'yrs', 'exp_cumul', 'complexity'].forEach(h => {
+            const s = document.createElement('span');
+            s.textContent = h;
+            header.appendChild(s);
+          });
+          resultsEl.appendChild(header);
+
+          for (const row of ROWS) {
+            await wait(110);
+            const rowEl = document.createElement('div');
+            rowEl.className = 'term-result-row';
+            row.forEach((cell, i) => {
+              const s = document.createElement('span');
+              s.textContent = cell;
+              if (i === 2) s.className = 'term-amount'; // exp_cumul in green
+              rowEl.appendChild(s);
+            });
+            resultsEl.appendChild(rowEl);
+          }
+
+          await wait(160);
+          const dotEl = document.createElement('div');
+          dotEl.className = 'term-result-row term-ellipsis';
+          ['⋮','⋮','⋮','⋮'].forEach(v => {
+            const s = document.createElement('span');
+            s.textContent = v;
+            dotEl.appendChild(s);
+          });
+          resultsEl.appendChild(dotEl);
+
+          await wait(120);
+          const summary = document.createElement('div');
+          summary.className = 'term-summary';
+          summary.textContent = '3 roles  ·  6.2+ yrs exp';
+          resultsEl.appendChild(summary);
+
+          await wait(4500);
+        }
+      }
+
+      runTerminal();
+    })();
 
     // Fade-in via Intersection Observer
     const observer = new IntersectionObserver((entries) => {
