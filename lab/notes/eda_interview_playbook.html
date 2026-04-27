@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDA Interview Playbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-text-primary:      #1a1a1a;
+      --color-text-secondary:    #555;
+      --color-text-tertiary:     #999;
+      --color-background-primary:   #ffffff;
+      --color-background-secondary: #f6f6f6;
+      --color-border-secondary:  #e0e0e0;
+      --color-border-tertiary:   #ebebeb;
+      --border-radius-md: 6px;
+      --border-radius-lg: 10px;
+      --font-mono: 'Fira Code', 'Fira Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f9f9f9;
+      color: var(--color-text-primary);
+      min-height: 100vh;
+      padding: 0 0 60px;
+    }
+
+    .page-header {
+      background: #fff;
+      border-bottom: 1px solid var(--color-border-tertiary);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .back-link {
+      font-size: 13px;
+      color: #7F77DD;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .back-link:hover { opacity: 0.75; }
+
+    .back-link svg { width: 16px; height: 16px; }
+
+    .page-header-divider {
+      width: 1px;
+      height: 18px;
+      background: var(--color-border-secondary);
+    }
+
+    .page-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    .page-tag {
+      margin-left: auto;
+      font-size: 11px;
+      padding: 2px 10px;
+      border-radius: 99px;
+      background: #EEEDFE;
+      color: #534AB7;
+      font-weight: 500;
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 32px auto;
+      padding: 0 24px;
+      background: #fff;
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    /* ── note styles (from original) ── */
+    .tab-bar { display: flex; gap: 0; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 1.5rem; }
+    .tab { padding: 8px 18px; font-size: 13px; font-weight: 500; cursor: pointer; color: var(--color-text-secondary); border-bottom: 2px solid transparent; background: transparent; border-top: none; border-left: none; border-right: none; white-space: nowrap; transition: color 0.15s; }
+    .tab.active { color: var(--color-text-primary); border-bottom-color: #7F77DD; }
+    .tab:hover { color: var(--color-text-primary); }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .step { display: flex; gap: 14px; margin-bottom: 1.5rem; align-items: flex-start; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; margin-top: 1px; }
+    .step-body { flex: 1; min-width: 0; }
+    .step-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+    .step-why { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.5; }
+    .code { font-family: var(--font-mono); font-size: 11.5px; line-height: 1.85; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; color: var(--color-text-primary); white-space: pre; overflow-x: auto; margin-bottom: 6px; }
+    .kw { color: #534AB7; font-weight: 500; }
+    .fn { color: #0F6E56; }
+    .str { color: #993C1D; }
+    .cm { color: var(--color-text-tertiary); font-style: italic; }
+    .num { color: #BA7517; }
+    .connector { width: 1px; height: 14px; background: var(--color-border-secondary); margin-left: 13px; margin-bottom: 0; }
+    .output-box { font-size: 12px; color: var(--color-text-secondary); background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 8px 12px; line-height: 1.6; }
+    .output-label { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; color: var(--color-text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
+    .highlight { background: #FAEEDA; color: #412402; border-radius: 3px; padding: 1px 4px; font-family: var(--font-mono); font-size: 11px; }
+    .highlight-red { background: #FCEBEB; color: #501313; border-radius: 3px; padding: 1px 4px; font-family: var(--font-mono); font-size: 11px; }
+    .interview-tip { background: #EEEDFE; border-left: 3px solid #7F77DD; border-radius: 0; padding: 8px 12px; font-size: 12px; color: #26215C; margin-top: 8px; }
+    .tip-label { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; color: #534AB7; margin-bottom: 3px; }
+    .section-title { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; color: var(--color-text-tertiary); text-transform: uppercase; margin: 1.5rem 0 0.75rem; }
+    .script-box { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+    .script-q { font-size: 12px; font-weight: 500; color: var(--color-text-tertiary); margin-bottom: 6px; }
+    .script-a { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; border-left: 3px solid #1D9E75; padding-left: 10px; }
+    .bad-good { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .bad { background: #FCEBEB; border-radius: var(--border-radius-md); padding: 8px 10px; font-size: 12px; color: #501313; }
+    .good { background: #EAF3DE; border-radius: var(--border-radius-md); padding: 8px 10px; font-size: 12px; color: #173404; }
+    .label-bad { font-size: 10px; font-weight: 500; color: #A32D2D; margin-bottom: 4px; }
+    .label-good { font-size: 10px; font-weight: 500; color: #3B6D11; margin-bottom: 4px; }
+    .checklist { list-style: none; padding: 0; margin: 0; }
+    .checklist li { display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; color: var(--color-text-secondary); }
+    .checklist li:last-child { border-bottom: none; }
+    .check-icon { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--color-border-secondary); flex-shrink: 0; margin-top: 1px; }
+    .step-tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 99px; font-weight: 500; margin-left: 6px; vertical-align: middle; }
+
+    @media (max-width: 600px) {
+      .content { padding: 20px 16px; }
+      .bad-good { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="../" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Lab
+    </a>
+    <div class="page-header-divider"></div>
+    <span class="page-title">EDA Interview Playbook</span>
+    <span class="page-tag">Python · Data</span>
+  </div>
+
+  <div class="content">
+
+    <div style="padding: 1rem 0;">
+      <div class="tab-bar">
+        <button class="tab active" onclick="go('flow')">5-step flow</button>
+        <button class="tab" onclick="go('code')">Full code</button>
+        <button class="tab" onclick="go('talk')">How to talk</button>
+        <button class="tab" onclick="go('check')">Checklist</button>
+      </div>
+
+      <div id="p-flow" class="panel active">
+
+        <div class="step">
+          <div class="step-num" style="background:#EEEDFE;color:#3C3489;">1</div>
+          <div class="step-body">
+            <div class="step-title">Understand the shape <span class="step-tag" style="background:#EEEDFE;color:#3C3489;">always first</span></div>
+            <div class="step-why">Before touching anything — know how big the data is, what columns exist, what types they are.</div>
+            <div class="code">df.shape          <span class="cm"># rows × columns</span>
+df.dtypes         <span class="cm"># data type of each column</span>
+df.head()         <span class="cm"># see what the data actually looks like</span></div>
+            <div class="output-box"><div class="output-label">what to look for</div>
+              Unexpected dtypes — e.g. a date column showing as <span class="highlight">object</span> means it's stored as text and needs converting.
+            </div>
+          </div>
+        </div>
+        <div class="connector"></div>
+
+        <div class="step">
+          <div class="step-num" style="background:#E1F5EE;color:#085041;">2</div>
+          <div class="step-body">
+            <div class="step-title">Check missing values</div>
+            <div class="step-why">Find which columns have nulls, how many, and decide how to handle them.</div>
+            <div class="code">df.isnull().sum()
+(df.isnull().mean() * 100).round(2)  <span class="cm"># as %</span></div>
+            <div class="output-box"><div class="output-label">decision rule</div>
+              &lt;5% → impute (median for skewed, mean for normal) &nbsp;|&nbsp; &gt;30% → consider dropping column &nbsp;|&nbsp; Always ask <em>why</em> it's missing.
+            </div>
+            <div class="interview-tip"><div class="tip-label">interview tip</div>Don't just say "I'll fill it with the mean." Say <em>why</em> — income is right-skewed, so median is safer than mean.</div>
+          </div>
+        </div>
+        <div class="connector"></div>
+
+        <div class="step">
+          <div class="step-num" style="background:#FAEEDA;color:#633806;">3</div>
+          <div class="step-body">
+            <div class="step-title">Check uniqueness & primary key</div>
+            <div class="step-why">Confirm no duplicate rows exist, and identify which column is the unique identifier.</div>
+            <div class="code">df.duplicated().sum()        <span class="cm"># duplicate rows</span>
+df.nunique().sort_values()   <span class="cm"># unique count per column</span></div>
+            <div class="output-box"><div class="output-label">reading the output</div>
+              nunique = 1 → useless column (zero variance) &nbsp;|&nbsp;
+              nunique = 2–20 → likely categorical &nbsp;|&nbsp;
+              nunique = total rows → primary key candidate
+            </div>
+          </div>
+        </div>
+        <div class="connector"></div>
+
+        <div class="step">
+          <div class="step-num" style="background:#FAECE7;color:#712B13;">4</div>
+          <div class="step-body">
+            <div class="step-title">Inspect data quality</div>
+            <div class="step-why">Categorical columns: look for invalid/typo values. Numeric columns: look for outliers.</div>
+            <div class="code"><span class="cm"># Categorical — check all unique values</span>
+<span class="kw">for</span> col <span class="kw">in</span> df.select_dtypes(include=<span class="str">'object'</span>).columns:
+    <span class="fn">print</span>(df[col].value_counts(), <span class="str">'\n'</span>)
+
+<span class="cm"># Numeric — distribution summary</span>
+df.describe()
+
+<span class="cm"># Numeric — IQR method to flag outliers</span>
+Q1 = df[<span class="str">'Income'</span>].quantile(<span class="num">0.25</span>)
+Q3 = df[<span class="str">'Income'</span>].quantile(<span class="num">0.75</span>)
+IQR = Q3 - Q1
+df[df[<span class="str">'Income'</span>] > Q3 + <span class="num">1.5</span> * IQR]</div>
+            <div class="interview-tip"><div class="tip-label">interview tip</div>The IQR method is the standard answer for "how do you detect outliers?" Always have this ready.</div>
+          </div>
+        </div>
+        <div class="connector"></div>
+
+        <div class="step">
+          <div class="step-num" style="background:#E6F1FB;color:#0C447C;">5</div>
+          <div class="step-body">
+            <div class="step-title">Identify data gaps <span class="step-tag" style="background:#E6F1FB;color:#0C447C;">no code needed</span></div>
+            <div class="step-why">Think like a business analyst — what questions can this data NOT answer? What's missing that would make the analysis stronger?</div>
+            <div class="output-box"><div class="output-label">examples for this dataset</div>
+              No geography → can't analyse regional behaviour<br>
+              No transaction detail → only 2-year spending totals, can't see seasonality<br>
+              No campaign content → know who accepted, not what the offer was
+            </div>
+            <div class="interview-tip"><div class="tip-label">interview tip</div>This step separates analysts from coders. Most candidates skip it. Doing it well is a big differentiator.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="p-code" class="panel">
+        <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:1rem;">Copy this into your notebook. Run top to bottom. Every line has a purpose.</div>
+        <div class="code"><span class="cm">### STEP 1 — Shape & types</span>
+<span class="fn">print</span>(df.shape)
+<span class="fn">print</span>(df.dtypes)
+df.<span class="fn">head</span>()
+
+<span class="cm">### STEP 2 — Missing values</span>
+missing = df.<span class="fn">isnull</span>().<span class="fn">sum</span>()
+pct     = (df.<span class="fn">isnull</span>().<span class="fn">mean</span>() * <span class="num">100</span>).<span class="fn">round</span>(<span class="num">2</span>)
+pd.<span class="fn">DataFrame</span>({<span class="str">'count'</span>: missing, <span class="str">'pct'</span>: pct})[missing > <span class="num">0</span>]
+
+<span class="cm">### STEP 3 — Uniqueness & primary key</span>
+<span class="fn">print</span>(<span class="str">'Duplicate rows:'</span>, df.<span class="fn">duplicated</span>().<span class="fn">sum</span>())
+df.<span class="fn">nunique</span>().<span class="fn">sort_values</span>()
+
+<span class="cm">### STEP 4a — Categorical columns: value counts</span>
+<span class="kw">for</span> col <span class="kw">in</span> df.<span class="fn">select_dtypes</span>(include=<span class="str">'object'</span>).columns:
+    <span class="fn">print</span>(<span class="str">f'\n--- {col} ---'</span>)
+    <span class="fn">print</span>(df[col].<span class="fn">value_counts</span>())
+
+<span class="cm">### STEP 4b — Numeric columns: distribution</span>
+df.<span class="fn">describe</span>().<span class="fn">round</span>(<span class="num">1</span>)
+
+<span class="cm">### STEP 4c — Outliers (IQR method)</span>
+<span class="kw">for</span> col <span class="kw">in</span> df.<span class="fn">select_dtypes</span>(include=<span class="str">'number'</span>).columns:
+    Q1  = df[col].<span class="fn">quantile</span>(<span class="num">0.25</span>)
+    Q3  = df[col].<span class="fn">quantile</span>(<span class="num">0.75</span>)
+    IQR = Q3 - Q1
+    n_out = (df[col] > Q3 + <span class="num">1.5</span> * IQR).sum()
+    <span class="kw">if</span> n_out > <span class="num">0</span>:
+        <span class="fn">print</span>(<span class="str">f'{col}: {n_out} outliers'</span>)
+
+<span class="cm">### STEP 5 — Write your conclusions (Markdown cell)</span>
+<span class="cm"># Shape, missing, primary key, dirty data, gaps</span></div>
+        <div class="interview-tip" style="margin-top:1rem;"><div class="tip-label">key habit</div>Steps 4a and 4b use <code>select_dtypes()</code> — this automatically finds the right columns. Never hardcode column names you could infer from the data type.</div>
+      </div>
+
+      <div id="p-talk" class="panel">
+        <div class="section-title">Opening line — say this before touching the keyboard</div>
+        <div class="script-box">
+          <div class="script-a">"I'll follow a structured EDA framework: first understand the shape and data types, then check for missing values, then uniqueness and primary keys, then data quality issues like dirty values and outliers, and finally identify what's missing from the dataset that would strengthen the analysis."</div>
+        </div>
+
+        <div class="section-title">When you find something — how to frame it</div>
+        <div class="script-box">
+          <div class="script-q">You found 24 missing values in Income</div>
+          <div class="bad-good">
+            <div class="bad"><div class="label-bad">weak answer</div>"Income has 24 nulls. I'll fill them with the mean."</div>
+            <div class="good"><div class="label-good">strong answer</div>"Income has 24 missing values — about 1%. Before imputing, I'd check whether the missingness correlates with other variables. Since income distributions are typically right-skewed, I'd use the median rather than the mean to avoid being pulled by outliers."</div>
+          </div>
+        </div>
+
+        <div class="script-box">
+          <div class="script-q">You found 'YOLO' and 'Absurd' in Marital_Status</div>
+          <div class="bad-good">
+            <div class="bad"><div class="label-bad">weak answer</div>"There are some weird values I'll clean up."</div>
+            <div class="good"><div class="label-good">strong answer</div>"Marital_Status contains 'YOLO' and 'Absurd' — clearly data entry errors. Together they're only 7 rows, or 0.3% of the dataset, so dropping them has negligible impact. Alternatively, they could be merged into 'Single' since they likely represent single individuals."</div>
+          </div>
+        </div>
+
+        <div class="script-box">
+          <div class="script-q">Closing summary — end every EDA with this</div>
+          <div class="script-a">"To summarise: the dataset has [X] rows and [Y] columns, [ID] as the primary key, and no duplicate rows. The main issues are [list 2–3 findings]. Before modelling, I would [actions]. One limitation of this dataset is that it lacks [gap], which would prevent us from [business question it blocks]."</div>
+        </div>
+
+        <div class="interview-tip"><div class="tip-label">the golden rule</div>Every finding needs three parts: what you found → why it matters → what you'd do about it. One sentence each is enough.</div>
+      </div>
+
+      <div id="p-check" class="panel">
+        <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:1rem;">Use this as a mental checklist during the interview. Tick each one off before moving to the next step.</div>
+
+        <div class="section-title">Step 1 — Shape</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Stated the number of rows and columns out loud</li>
+          <li><div class="check-icon"></div>Checked dtypes — flagged any that look wrong (e.g. date stored as object)</li>
+          <li><div class="check-icon"></div>Looked at head() to understand what a row actually represents</li>
+        </ul>
+
+        <div class="section-title">Step 2 — Missing values</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Identified which columns have nulls and what percentage</li>
+          <li><div class="check-icon"></div>Discussed <em>why</em> they might be missing (not just that they exist)</li>
+          <li><div class="check-icon"></div>Proposed a handling strategy with justification</li>
+        </ul>
+
+        <div class="section-title">Step 3 — Uniqueness</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Confirmed zero duplicate rows</li>
+          <li><div class="check-icon"></div>Identified the primary key</li>
+          <li><div class="check-icon"></div>Used nunique() to classify columns (constant / categorical / continuous / ID)</li>
+        </ul>
+
+        <div class="section-title">Step 4 — Data quality</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Ran value_counts() on all categorical columns</li>
+          <li><div class="check-icon"></div>Spotted invalid category values (typos, junk entries)</li>
+          <li><div class="check-icon"></div>Ran describe() and looked at min / max carefully</li>
+          <li><div class="check-icon"></div>Applied IQR method to flag numeric outliers</li>
+          <li><div class="check-icon"></div>Identified zero-variance columns (nunique = 1) to drop</li>
+        </ul>
+
+        <div class="section-title">Step 5 — Data gaps</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Named at least 2 pieces of information the dataset doesn't have</li>
+          <li><div class="check-icon"></div>Explained what business question each gap prevents you from answering</li>
+        </ul>
+
+        <div class="section-title">Delivery</div>
+        <ul class="checklist">
+          <li><div class="check-icon"></div>Stated your framework out loud before starting</li>
+          <li><div class="check-icon"></div>Every finding was followed by "why it matters" and "what I'd do"</li>
+          <li><div class="check-icon"></div>Closed with a 3-sentence summary</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const ids = ['flow', 'code', 'talk', 'check'];
+    function go(id) {
+      ids.forEach((t, i) => {
+        document.getElementById('p-' + t).classList.toggle('active', t === id);
+        document.querySelectorAll('.tab')[i].classList.toggle('active', t === id);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab — Jason Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:          #0a192f;
+      --light-navy:    #112240;
+      --lightest-navy: #233554;
+      --slate:         #8892b0;
+      --light-slate:   #a8b2d8;
+      --lightest-slate:#ccd6f6;
+      --green:         #64ffda;
+      --green-tint:    rgba(100,255,218,0.1);
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--navy);
+      color: var(--slate);
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      border-bottom: 1px solid var(--lightest-navy);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-link {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--slate);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--green); }
+    .back-link svg { width: 16px; height: 16px; }
+
+    .divider { width: 1px; height: 18px; background: var(--lightest-navy); }
+
+    .lab-title {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--green);
+    }
+
+    .header-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--slate);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .page-heading {
+      margin-bottom: 8px;
+    }
+
+    .page-heading h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--lightest-slate);
+    }
+
+    .page-heading p {
+      font-size: 14px;
+      color: var(--slate);
+      margin-top: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .category {
+      margin-top: 48px;
+    }
+
+    .category-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--lightest-navy);
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .note-card {
+      background: var(--light-navy);
+      border: 1px solid var(--lightest-navy);
+      border-radius: 6px;
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .note-card:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -10px rgba(2,12,27,0.7);
+    }
+
+    .note-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .note-icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .note-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      border: 1px solid var(--lightest-navy);
+      color: var(--slate);
+    }
+
+    .note-card h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--lightest-slate);
+      margin-bottom: 6px;
+      transition: color 0.2s;
+    }
+
+    .note-card:hover h3 { color: var(--green); }
+
+    .note-card p {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--lightest-navy);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 14px 20px; }
+      main { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <a href="../index.html" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Home
+      </a>
+      <div class="divider"></div>
+      <span class="lab-title">/ lab</span>
+    </div>
+    <span class="header-tag">private</span>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <h1>Notes & Playbooks</h1>
+      <p>// personal study notes — not indexed</p>
+    </div>
+
+    <div class="category">
+      <div class="category-label">Data & Analytics</div>
+      <div class="notes-grid">
+
+        <a href="notes/eda_interview_playbook.html" class="note-card">
+          <div class="note-card-top">
+            <span class="note-icon">📊</span>
+            <span class="note-tag">Python · Data</span>
+          </div>
+          <h3>EDA Interview Playbook</h3>
+          <p>5-step analysis framework, full code template, how to talk through findings, and a pre-interview checklist.</p>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Add more categories here as you collect more notes -->
+    <!-- Example:
+    <div class="category">
+      <div class="category-label">SQL & Databases</div>
+      <div class="notes-grid">
+        ...
+      </div>
+    </div>
+    -->
+
+  </main>
+
+  <footer>not linked · not indexed · just mine</footer>
+
+</body>
+</html>
