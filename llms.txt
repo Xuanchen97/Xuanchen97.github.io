@@ -1,0 +1,39 @@
+# Xuanchen (Jason) Liu
+
+> Xuanchen Liu, who goes by Jason, is a Solutions Developer and Data Engineer based in Ontario, Canada. He works at Hamilton Health Sciences' Population Health Research Institute (PHRI), building clinical data systems, SQL/SSIS ETL pipelines and full-stack applications that support population health research.
+
+Key facts:
+
+- Name: Xuanchen Liu. Preferred name: Jason Liu. Also written "Xuanchen (Jason) Liu".
+- Current role: Solutions Developer, Hamilton Health Sciences — Population Health Research Institute (PHRI), Aug 2023 – present.
+- Location: Ontario, Canada (Eastern Time).
+- Specialties: clinical and healthcare data systems; ETL pipelines with T-SQL and SSIS; SQL Server, Oracle and MySQL integration; back-end APIs in C# (.NET) and Python (FastAPI); front ends in React, Vue and TypeScript.
+- Experience: 5+ years across healthcare research, enterprise software and non-profit technology.
+- Education: Sheridan College (Ontario) — Software Development and Network Engineering.
+- Contact: jasonliu97424@gmail.com · LinkedIn https://www.linkedin.com/in/xuanchen-liu-jason/ · GitHub https://github.com/Xuanchen97
+
+## Experience
+
+- Solutions Developer — Hamilton Health Sciences / PHRI (Aug 2023 – present): translates complex clinical payment rules into reliable SQL data logic with study teams and finance; standardized and reconstructed a legacy payment pipeline (Excel tracking and undocumented SQL); builds SSIS packages that synchronize SQL Server and Oracle; extends the in-house clinical data management system; coordinates Git-based releases in an Agile team.
+- Full-Stack Developer — Orispark Inc. (Jan 2021 – Jul 2023): back-end systems in C# (.NET) and Python (FastAPI); RESTful APIs for data validation, transformation and integration; relational schema design and query optimization.
+- Technology Researcher & Developer (co-op) — World Vision Canada (Sept 2019 – Aug 2020): internal PHP/MySQL applications and reporting; Agile delivery with Azure DevOps and PI planning; full-stack apps with JavaScript, Node.js and Angular.
+
+## Selected projects
+
+- Clinical Payment Data Pipeline (Oct 2024 – present): unified data from TrialMaster (SQL Server) and DataFax (MySQL), validated quarterly payment consistency and automated finance business rules. T-SQL, SSIS, SQL Server, MySQL.
+- Participant Planning & Timeline Derivation (Oct 2025 – Apr 2026): C# transformation pipelines that derive projected visit schedules for multi-site clinical trials from partial enrollment data, anchored on first-patient-first-visit (FPFV), replacing manual Excel tracking.
+- [D3.js World Impact Map](https://xuanchen97.github.io/projects/d3map.html): interactive global, country and community impact map for World Vision Canada (2019). D3.js, JavaScript.
+- [Video Intelligence](https://xuanchen97.github.io/projects/videointellignece.html): Angular and Node.js app that uses the Google Video Intelligence API and Firebase to transcribe and label video (2019).
+- [Tools Inventory Management System](https://xuanchen97.github.io/projects/toolslibrary.html): PHP/MySQL tool-library system for a community in Rwanda — sign-out, holds, workspace reservations, late fees, reports (2019).
+- [Uzooka Shopify enhancements](https://xuanchen97.github.io/projects/uzooka.html): Bing Spell Check search, brand-aware catalog filter and Liquid-driven product graphics for a 5,000-product auto-parts store (2019).
+- [Polar Bear Dip Event PWA](https://xuanchen97.github.io/projects/polarbeardip.html): offline-ready Progressive Web App for a World Vision Canada event (2019).
+- [Nerd Overflow](https://github.com/Xuanchen97/NerdOverflow): developer Q&A forum built with ASP.NET and MS SQL Server.
+
+## Pages
+
+- [Profile](https://xuanchen97.github.io/): bio, experience, projects, FAQ and contact
+- [Résumé (PDF)](https://xuanchen97.github.io/resume/Xuanchen(Jason)%20Liu%20-%20Resume.pdf)
+
+## Optional
+
+- [Sitemap](https://xuanchen97.github.io/sitemap.xml)

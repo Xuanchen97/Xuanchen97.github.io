@@ -1,101 +1,199 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-    <title>Xuanchen Liu | Jason Liu | Full-Stack Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-    <!-- bootstrap-css -->
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <!--// bootstrap-css -->
-    <!-- css -->
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/animate.css" type="text/css" media="all" />
-    <!--// css -->
-    <!-- font-awesome icons -->
-    <link href="../css/font-awesome.css" rel="stylesheet">
-    <!-- //font-awesome icons -->
-    <script src="../js/jquery-1.11.1.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <!-- menu -->
-    <link rel="stylesheet" href="../css/projects.css">
-    <script type="text/javascript" src="../js/main.js"></script>
-    <!-- //menu -->
-    <link rel="shortcut icon" href="../images/icon.png">
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>D3.js World Impact Map — Case Study | Xuanchen (Jason) Liu</title>
+  <meta name="description" content="Case study: an interactive D3.js world impact map for World Vision Canada, visualizing global, country and community impact data. By Jason Liu.">
+  <link rel="canonical" href="https://xuanchen97.github.io/projects/d3map.html">
+  <meta name="author" content="Xuanchen (Jason) Liu">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#07080b">
+  <meta name="color-scheme" content="dark">
 
-        function gtag() {
-            dataLayer.push(arguments);
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Xuanchen (Jason) Liu">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:url" content="https://xuanchen97.github.io/projects/d3map.html">
+  <meta property="og:title" content="D3.js World Impact Map — Case Study">
+  <meta property="og:description" content="Case study: an interactive D3.js world impact map for World Vision Canada, visualizing global, country and community impact data. By Jason Liu.">
+  <meta property="og:image" content="https://xuanchen97.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:author" content="https://xuanchen97.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="D3.js World Impact Map — Case Study">
+  <meta name="twitter:description" content="Case study: an interactive D3.js world impact map for World Vision Canada, visualizing global, country and community impact data. By Jason Liu.">
+  <meta name="twitter:image" content="https://xuanchen97.github.io/assets/og-image.png">
+
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preload" href="../assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://xuanchen97.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://xuanchen97.github.io/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "D3.js Impact Map",
+          "item": "https://xuanchen97.github.io/projects/d3map.html"
         }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-152917112-1');
-    </script>
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://xuanchen97.github.io/projects/d3map.html#project",
+      "name": "D3.js World Impact Map",
+      "headline": "D3.js World Impact Map",
+      "description": "Case study: an interactive D3.js world impact map for World Vision Canada, visualizing global, country and community impact data. By Jason Liu.",
+      "url": "https://xuanchen97.github.io/projects/d3map.html",
+      "image": "https://xuanchen97.github.io/assets/img/thumb-d3map.webp",
+      "dateCreated": "2019-11",
+      "inLanguage": "en",
+      "keywords": "D3.js, JavaScript, jQuery, HTML / CSS",
+      "author": {
+        "@type": "Person",
+        "@id": "https://xuanchen97.github.io/#person",
+        "name": "Xuanchen Liu",
+        "alternateName": "Jason Liu",
+        "url": "https://xuanchen97.github.io/"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://xuanchen97.github.io/#website",
+        "url": "https://xuanchen97.github.io/"
+      }
+    }
+  ]
+}
+  </script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-<body class="animated slow delay-1s fadeIn">
-    <script>
-        function backHome() {
-            window.location.href = "../index.html"
-        }
-    </script>
-    <div class="row">
-        <div class="col-xl-3 col-lg-2">
-        </div>
-        <div class="col-xl-6 col-lg-8">
-            <h3 class="mt-5 mb-5" onclick="backHome()" style="cursor: pointer"><b>
-                    <i class="fa fa-chevron-circle-left"></i></b> Back</h3>
-            <h2><b>D3.js World Impact Map</b></h2>
-            <p style="color: #aaaaaa">Nov 2019</p>
-            <p>D3.js World Impact Map was designed for people to interact with it and see how the organization made changes in
-                the world.
-            </p>
-            <h3 class="mt-3 mb-3"><b>Design Thinking</b></h3>
-            <p>The donor expects greater transparency on how World Vision Canada uses the funds they entrust to us. Our
-                digital team
-                collects impact data annually from communities around the world, which we aim to present more visually
-                through a map in
-                a mall display.I was responsible for the main development work of this project and assisted with
-                communication between the project
-                manager, shareholders, and the digital team.
-            </p>
-            <p></p>
-            <p><b>Global Level</b></p>
-            <img src="../images/d3map/global.gif" alt="mockup" class="bigImage mt-0" style="width:100%;">
-            <hr>
-            <p><b>Country Level (Country lookup, Progress view, Info data compare)</b></p>
-            <img src="../images/d3map/country.gif" class="bigImage mt-0" style="width:100%;">
-            <hr>
-            <p><b>Community Level</b></p>
-            <img src="../images/d3map/community.gif" class="bigImage mt-0" style="width:100%;">
-            <hr>
-            <br>
-
-            <h3 class="mt-3 mb-3"><b>Development Tools/Languages</b></h3>
-            <ul>
-                <li>D3.js API</li>
-                <li>JavaScript</li>
-                <li>jQuery</li>
-                <li>HTML/CSS</li>
-            </ul>
-            <p></p>
-            <br>
-        </div>
-        <div class="col-xl-3 col-lg-2">
-        </div>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13h4.5l2.2-5.5 3.6 11 2.6-8 1.6 2.5H22"/></svg></span>
+        <span>Jason Liu <span class="brand-sub">/ Xuanchen</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#projects" aria-current="true">Projects</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cmdk-trigger" type="button" data-cmdk>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="label">Search</span><span class="kbd" data-cmdk-key aria-hidden="true">⌘K</span>
+        </button>
+        <a class="btn btn-ghost btn-sm" href="../resume/Xuanchen(Jason)%20Liu%20-%20Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="menu-btn-inner"><span></span><span></span></span>
+        </button>
+      </div>
     </div>
-    <!-- copyright -->
-    <div class="agileits-w3layouts-footer">
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <ol>
+        <li><a href="../#about"><span>01</span>About</a></li>
+        <li><a href="../#experience"><span>02</span>Experience</a></li>
+        <li><a href="../#projects"><span>03</span>Projects</a></li>
+        <li><a href="../#faq"><span>04</span>FAQ</a></li>
+        <li><a href="../#contact"><span>05</span>Contact</a></li>
+      </ol>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a class="btn btn-primary btn-sm" href="mailto:jasonliu97424@gmail.com">Say hello</a>
+      <a class="btn btn-ghost btn-sm" href="../resume/Xuanchen(Jason)%20Liu%20-%20Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/Xuanchen97" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/xuanchen-liu-jason/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <article>
+      <header class="cs-hero">
+        <div class="bg-aurora" aria-hidden="true"></div>
+        <div class="bg-grid" aria-hidden="true"></div>
         <div class="container">
-            <p>&copy; 2024 Jason Liu.</p>
+          <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+            <ol>
+              <li><a href="../">Home</a></li>
+              <li><a href="../#projects">Projects</a></li>
+              <li><span aria-current="page">D3.js Impact Map</span></li>
+            </ol>
+          </nav>
+          <p class="cs-kicker" data-reveal style="--d:60ms">Data visualization · World Vision Canada</p>
+          <h1 class="cs-title" data-reveal style="--d:120ms">D3.js World Impact Map</h1>
+          <p class="cs-lead" data-reveal style="--d:180ms">An interactive map, built for a public mall display, that lets people explore how World Vision Canada&#x27;s work changes communities around the world — from global totals down to individual communities.</p>
+          <dl class="cs-meta" data-reveal style="--d:240ms"><div><dt>Year</dt><dd>Nov 2019</dd></div><div><dt>Context</dt><dd>World Vision Canada</dd></div><div><dt>Role</dt><dd>Main developer</dd></div><div><dt>Stack</dt><dd>D3.js · JavaScript · jQuery</dd></div></dl>
         </div>
-    </div>
-    <!-- //copyright -->
-    <script src="../js/projects.js" charset="utf-8" type="7f1fd2ee9a34b074d5978574-text/javascript"></script>
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="7f1fd2ee9a34b074d5978574-|49" defer=""></script>
-</body>
+      </header>
 
+      <div class="cs-body">
+        <div class="container prose">
+<h2>The challenge</h2>
+<p>Donors expect greater transparency on how World Vision Canada uses the funds they entrust to it. The digital team collects impact data every year from communities around the world, and wanted to present it far more visually — as an interactive map running on a mall display.</p>
+<h2>My role</h2>
+<p>I was responsible for the main development work, and helped coordinate communication between the project manager, stakeholders and the digital team.</p>
+<h2>Walkthrough</h2>
+<p>The map works at three zoom levels, each revealing more detail about where the funds go and what they achieve.</p>
+<figure class="figure"><div class="frame"><div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span></div><video data-autoplay muted loop playsinline controls preload="none" width="960" height="455" poster="../assets/img/d3map/global-poster.webp" aria-label="Global view of the D3.js impact map"><source src="../assets/video/d3map/global.webm" type="video/webm"><source src="../assets/video/d3map/global.mp4" type="video/mp4"></video></div><figcaption><b>Fig. 01</b><span>Global level — impact data across every country World Vision Canada works in.</span></figcaption></figure>
+<figure class="figure"><div class="frame"><div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span></div><video data-autoplay muted loop playsinline controls preload="none" width="960" height="455" poster="../assets/img/d3map/country-poster.webp" aria-label="Country view with lookup, progress and comparison"><source src="../assets/video/d3map/country.webm" type="video/webm"><source src="../assets/video/d3map/country.mp4" type="video/mp4"></video></div><figcaption><b>Fig. 02</b><span>Country level — country lookup, progress view and side-by-side data comparison.</span></figcaption></figure>
+<figure class="figure"><div class="frame"><div class="frame-bar" aria-hidden="true"><span></span><span></span><span></span></div><video data-autoplay muted loop playsinline controls preload="none" width="960" height="455" poster="../assets/img/d3map/community-poster.webp" aria-label="Community-level detail view"><source src="../assets/video/d3map/community.webm" type="video/webm"><source src="../assets/video/d3map/community.mp4" type="video/mp4"></video></div><figcaption><b>Fig. 03</b><span>Community level — the impact story for an individual community.</span></figcaption></figure>
+<h2>Built with</h2>
+<ul class="chips" aria-label="Technologies"><li class="chip">D3.js API</li><li class="chip">JavaScript</li><li class="chip">jQuery</li><li class="chip">HTML / CSS</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <nav class="container cs-next" aria-label="More projects">
+      <a class="card" href="polarbeardip.html"><span class="dir">← Previous</span><span class="ttl">Polar Bear Dip Event PWA</span></a>
+      <a class="card" href="videointellignece.html"><span class="dir">Next →</span><span class="ttl">Video Intelligence</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Xuanchen (Jason) Liu · Hand-built, no frameworks</p>
+      <nav aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../#projects">All projects</a>
+        <a href="https://github.com/Xuanchen97" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/xuanchen-liu-jason/" target="_blank" rel="noopener">LinkedIn</a>
+        <button type="button" data-cmdk>Search <span class="kbd" data-cmdk-key aria-hidden="true">⌘K</span></button>
+      </nav>
+    </div>
+    <p class="footer-wordmark" aria-hidden="true">Jason Liu</p>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
 </html>
