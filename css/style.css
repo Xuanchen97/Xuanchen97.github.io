@@ -898,12 +898,12 @@ body::after {
 @media (prefers-reduced-motion: reduce) { .nf-line path { stroke-dashoffset: 0; } .nf-line circle { opacity: 1; } }
 
 /* ==========================================================================
-   Case-study components: chain diagram, data table, callout, project log
+   Case-study components: chain diagram, data table, callout
    ========================================================================== */
 .live-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: 1px; position: relative; }
 .live-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: ping 2.2s var(--ease) infinite; }
 
-.prose > .chain, .prose > .table-wrap, .prose > .log { max-width: none; }
+.prose > .chain, .prose > .table-wrap { max-width: none; }
 .chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 32px 0 40px; counter-reset: step; }
 .chain li { position: relative; padding: 20px 18px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--card); }
 .chain li:not(:last-child)::after {
@@ -938,16 +938,6 @@ body::after {
 .rules p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; }
 .rules code { font: 500 13px var(--font-mono); color: var(--accent); }
 
-.log { position: relative; margin: 28px 0 40px; padding-left: 28px; }
-.log::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line-2); }
-.log li { position: relative; padding-bottom: 26px; }
-.log li:last-child { padding-bottom: 0; }
-.log li::before { content: ""; position: absolute; left: -28px; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-2); }
-.log li.is-next::before { border-style: dashed; }
-.log li.is-done::before { border-color: var(--accent); background: var(--accent); }
-.log time, .log .when { font: 500 12.5px var(--font-mono); color: var(--text-3); }
-.log b { display: block; margin-top: 4px; color: var(--text); font-size: 16.5px; }
-.log p { margin: 6px 0 0; font-size: 15px; }
 
 .feature-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font: 500 14px var(--font-sans); color: var(--accent); }
 .feature-link svg { width: 16px; height: 16px; transition: transform 0.25s var(--ease); }

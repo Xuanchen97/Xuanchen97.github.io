@@ -69,7 +69,7 @@
       "description": "Case study: modernizing a 20-year-old VB6 clinical-trial site-payment system into one versioned platform for DataFax, TrialMaster and REDCap studies.",
       "url": "https://xuanchen97.github.io/projects/site-payments.html",
       "image": "https://xuanchen97.github.io/assets/og-image.png",
-      "dateCreated": "2026",
+      "dateCreated": "2025",
       "inLanguage": "en",
       "keywords": "C#, .NET, SQL Server, T-SQL, SSIS, DataFax, TrialMaster, REDCap, Domain modeling",
       "author": {
@@ -153,13 +153,12 @@
           <p class="cs-kicker" data-reveal style="--d:60ms">Legacy modernization · Clinical trial finance</p>
           <h1 class="cs-title" data-reveal style="--d:120ms">Site Payments Platform</h1>
           <p class="cs-lead" data-reveal style="--d:180ms">Our team is replacing a VB6 application that has calculated clinical-trial site payments for over 20 years with a modern platform — one place to model site contracts, price every payable event and pay the right institution, whether the data comes from DataFax, TrialMaster or REDCap.</p>
-          <dl class="cs-meta" data-reveal style="--d:240ms"><div><dt>Status</dt><dd><span class="live-dot" aria-hidden="true"></span>In progress</dd></div><div><dt>Context</dt><dd>Hamilton Health Sciences · PHRI</dd></div><div><dt>Role</dt><dd>Developer, modernization team</dd></div><div><dt>Stack</dt><dd>C# / .NET · SQL Server</dd></div></dl>
+          <dl class="cs-meta" data-reveal style="--d:240ms"><div><dt>Timeline</dt><dd><span class="live-dot" aria-hidden="true"></span>2025 — Present</dd></div><div><dt>Context</dt><dd>Hamilton Health Sciences · PHRI</dd></div><div><dt>Role</dt><dd>Solutions Developer</dd></div><div><dt>Stack</dt><dd>C# / .NET · SQL Server</dd></div></dl>
         </div>
       </header>
 
       <div class="cs-body">
         <div class="container prose">
-<!-- Living case study: add new entries to the "Project log" list at the top of that list. -->
 <h2>Why we're rebuilding it</h2>
 <p>Clinical trials pay the hospitals and investigators who run them — usually per participant visit, as written in each site's contract. For more than 20 years, our site payments were calculated by a <strong>VB6 desktop application</strong>, supported by spreadsheets and SQL that only a few people understood.</p>
 <p>Each data source also had its own way of building payment reports. Studies captured in <strong>DataFax</strong>, <strong>TrialMaster</strong> and <strong>REDCap</strong> each needed separate logic, so changing a contract, adding a study or answering "what exactly did we agree to pay last year?" was slow and risky.</p>
@@ -213,21 +212,6 @@
   <li><b>Source-agnostic by design</b><p>Payment criteria are defined against a common model, so the same fee schedule logic can be fed from DataFax, TrialMaster or REDCap instead of one bespoke report per system.</p></li>
   <li><b>Guard-railed editing</b><p>Unsaved allocation changes block structural actions (add, remove, replace, publish), published schedules are read-only, and permissions are split by role — editing, archiving, party management and vendor management.</p></li>
 </ul>
-
-<h2>Roadmap</h2>
-<p>The configuration layer is in place; the parts that consume it are next.</p>
-<ol class="log">
-  <li class="is-next"><span class="when">In progress</span><b>Payment run engine</b><p>Take completed visits, find the fee schedule that applies to each site, and produce payable amounts — reproducibly, against the exact contract version in force.</p></li>
-  <li class="is-next"><span class="when">Next</span><b>Criteria reports</b><p>Link each payable item to the source report that proves it was earned, across DataFax, TrialMaster and REDCap.</p></li>
-  <li class="is-next"><span class="when">Planned</span><b>Payment status &amp; vendor totals</b><p>Paid / pending status per participant, and running totals per vendor across studies to flag when an institution crosses the fiscal-audit threshold.</p></li>
-</ol>
-
-<h2>Project log</h2>
-<ol class="log">
-  <li class="is-done"><time datetime="2026-10">Oct 2026</time><b>Stakeholder walkthrough</b><p>End-to-end demo of the payable item → party → vendor chain, with a test plan of every validation rule for QA.</p></li>
-  <li class="is-done"><time datetime="2026-10">Oct 2026</time><b>Replace Party shipped</b><p>Staff turnover handled on a revision without re-entering any amounts.</p></li>
-  <li class="is-done"><span class="when">2026</span><b>Contract model in place</b><p>Payable items, payment criteria, parties, fee schedules with versioning and history, and the organization vendor registry.</p></li>
-</ol>
 
 <h2>Built with</h2>
 <ul class="chips" aria-label="Technologies"><li class="chip">C# / .NET</li><li class="chip">SQL Server</li><li class="chip">T-SQL</li><li class="chip">SSIS</li><li class="chip">DataFax</li><li class="chip">TrialMaster</li><li class="chip">REDCap</li><li class="chip">Domain modeling</li></ul>
