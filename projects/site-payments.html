@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Site Payments Platform: Replacing a 20-Year-Old VB6 System | Xuanchen (Jason) Liu</title>
+  <meta name="description" content="Case study: modernizing a 20-year-old VB6 clinical-trial site-payment system into one versioned platform for DataFax, TrialMaster and REDCap studies.">
+  <link rel="canonical" href="https://xuanchen97.github.io/projects/site-payments.html">
+  <meta name="author" content="Xuanchen (Jason) Liu">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#07080b">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Xuanchen (Jason) Liu">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:url" content="https://xuanchen97.github.io/projects/site-payments.html">
+  <meta property="og:title" content="Site Payments Platform: Replacing a 20-Year-Old VB6 System — Case Study">
+  <meta property="og:description" content="Case study: modernizing a 20-year-old VB6 clinical-trial site-payment system into one versioned platform for DataFax, TrialMaster and REDCap studies.">
+  <meta property="og:image" content="https://xuanchen97.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:author" content="https://xuanchen97.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Site Payments Platform: Replacing a 20-Year-Old VB6 System — Case Study">
+  <meta name="twitter:description" content="Case study: modernizing a 20-year-old VB6 clinical-trial site-payment system into one versioned platform for DataFax, TrialMaster and REDCap studies.">
+  <meta name="twitter:image" content="https://xuanchen97.github.io/assets/og-image.png">
+
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preload" href="../assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://xuanchen97.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://xuanchen97.github.io/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Site Payments Platform",
+          "item": "https://xuanchen97.github.io/projects/site-payments.html"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://xuanchen97.github.io/projects/site-payments.html#project",
+      "name": "Site Payments Platform",
+      "headline": "Site Payments Platform",
+      "description": "Case study: modernizing a 20-year-old VB6 clinical-trial site-payment system into one versioned platform for DataFax, TrialMaster and REDCap studies.",
+      "url": "https://xuanchen97.github.io/projects/site-payments.html",
+      "image": "https://xuanchen97.github.io/assets/og-image.png",
+      "dateCreated": "2026",
+      "inLanguage": "en",
+      "keywords": "C#, .NET, SQL Server, T-SQL, SSIS, DataFax, TrialMaster, REDCap, Domain modeling",
+      "author": {
+        "@type": "Person",
+        "@id": "https://xuanchen97.github.io/#person",
+        "name": "Xuanchen Liu",
+        "alternateName": "Jason Liu",
+        "url": "https://xuanchen97.github.io/"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://xuanchen97.github.io/#website",
+        "url": "https://xuanchen97.github.io/"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13h4.5l2.2-5.5 3.6 11 2.6-8 1.6 2.5H22"/></svg></span>
+        <span>Jason Liu <span class="brand-sub">/ Xuanchen</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../#about">About</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#projects" aria-current="true">Projects</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cmdk-trigger" type="button" data-cmdk>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="label">Search</span><span class="kbd" data-cmdk-key aria-hidden="true">⌘K</span>
+        </button>
+        <a class="btn btn-ghost btn-sm" href="../resume/Xuanchen(Jason)%20Liu%20-%20Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="menu-btn-inner"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <ol>
+        <li><a href="../#about"><span>01</span>About</a></li>
+        <li><a href="../#experience"><span>02</span>Experience</a></li>
+        <li><a href="../#projects"><span>03</span>Projects</a></li>
+        <li><a href="../#faq"><span>04</span>FAQ</a></li>
+        <li><a href="../#contact"><span>05</span>Contact</a></li>
+      </ol>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a class="btn btn-primary btn-sm" href="mailto:jasonliu97424@gmail.com">Say hello</a>
+      <a class="btn btn-ghost btn-sm" href="../resume/Xuanchen(Jason)%20Liu%20-%20Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/Xuanchen97" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/xuanchen-liu-jason/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <article>
+      <header class="cs-hero">
+        <div class="bg-aurora" aria-hidden="true"></div>
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+            <ol>
+              <li><a href="../">Home</a></li>
+              <li><a href="../#projects">Projects</a></li>
+              <li><span aria-current="page">Site Payments Platform</span></li>
+            </ol>
+          </nav>
+          <p class="cs-kicker" data-reveal style="--d:60ms">Legacy modernization · Clinical trial finance</p>
+          <h1 class="cs-title" data-reveal style="--d:120ms">Site Payments Platform</h1>
+          <p class="cs-lead" data-reveal style="--d:180ms">Our team is replacing a VB6 application that has calculated clinical-trial site payments for over 20 years with a modern platform — one place to model site contracts, price every payable event and pay the right institution, whether the data comes from DataFax, TrialMaster or REDCap.</p>
+          <dl class="cs-meta" data-reveal style="--d:240ms"><div><dt>Status</dt><dd><span class="live-dot" aria-hidden="true"></span>In progress</dd></div><div><dt>Context</dt><dd>Hamilton Health Sciences · PHRI</dd></div><div><dt>Role</dt><dd>Developer, modernization team</dd></div><div><dt>Stack</dt><dd>C# / .NET · SQL Server</dd></div></dl>
+        </div>
+      </header>
+
+      <div class="cs-body">
+        <div class="container prose">
+<!-- Living case study: add new entries to the "Project log" list at the top of that list. -->
+<h2>Why we're rebuilding it</h2>
+<p>Clinical trials pay the hospitals and investigators who run them — usually per participant visit, as written in each site's contract. For more than 20 years, our site payments were calculated by a <strong>VB6 desktop application</strong>, supported by spreadsheets and SQL that only a few people understood.</p>
+<p>Each data source also had its own way of building payment reports. Studies captured in <strong>DataFax</strong>, <strong>TrialMaster</strong> and <strong>REDCap</strong> each needed separate logic, so changing a contract, adding a study or answering "what exactly did we agree to pay last year?" was slow and risky.</p>
+<p>Our team is replacing it with a single web platform: model each site contract once, keep every version of it, and calculate payments the same way no matter which system the clinical data comes from.</p>
+
+<div class="callout">
+  <p>The contract says: for every completed 6-month visit at this site, pay these people these amounts. We enter that table once — and keep every version of it.</p>
+  <p>Names and amounts on this page are illustrative, not a real agreement.</p>
+</div>
+
+<h2>How a payable item reaches a party</h2>
+<p>The new domain model answers five questions in order. Each one is its own entity with its own rules, which is what lets the platform stay independent of any single data source.</p>
+<ol class="chain">
+  <li><span class="q">What?</span><b>Payable Item</b><p>Something the study pays for, such as a completed 6-month visit.</p></li>
+  <li><span class="q">When earned?</span><b>Payment Criteria</b><p>The rule that says a participant has earned that item, evaluated against EDC data.</p></li>
+  <li><span class="q">Who?</span><b>Payable Party</b><p>A person or office the study pays: investigator, coordinator, hospital, national office.</p></li>
+  <li class="is-key"><span class="q">How much, where?</span><b>Fee Schedule</b><p>The contract's fee appendix: amounts per item and party for a set of sites, in one country and currency.</p></li>
+  <li><span class="q">Paid to whom?</span><b>Vendor</b><p>The approved institution that actually receives the money — closer to a bank account than a person.</p></li>
+</ol>
+<p>Payable items and parties belong to a study. Fee schedules belong to a study and cover a set of centre codes. Vendors sit above every study, at the organization level — one hospital can be paid for many roles across many trials.</p>
+
+<h3>One row, followed all the way through</h3>
+<p>Participant 101-0007 completes the 6-month follow-up. The payment criteria say that item is earned. Centre 101 is covered by one fee schedule, whose 6-month row splits the fee between three parties — and all three map to the same hospital vendor, so finance sends a single payment.</p>
+<div class="table-wrap">
+  <table class="data-table">
+    <caption>Fee schedule · Centre 101 · CAD · Published v1.1.0 (illustrative)</caption>
+    <thead>
+      <tr><th>Payable item</th><th><small>Principal Investigator</small>Dr. P. Raman</th><th><small>Study Coordinator</small>D. Okafor</th><th><small>Institution</small>Heart Institute</th><th>Total</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Randomization</td><td>600.00</td><td>400.00</td><td>500.00</td><td>1,500.00</td></tr>
+      <tr><td>Discharge</td><td>100.00</td><td>100.00</td><td>50.00</td><td>250.00</td></tr>
+      <tr class="is-hl"><td>6-month follow-up</td><td>150.00</td><td>150.00</td><td>100.00</td><td>400.00</td></tr>
+      <tr><td>1-year follow-up</td><td>150.00</td><td>150.00</td><td>100.00</td><td>400.00</td></tr>
+      <tr><td>Clinical event report <small>(up to 3×)</small></td><td class="zero">0.00</td><td>125.00</td><td class="zero">0.00</td><td>125.00</td></tr>
+      <tr><td>Imaging substudy – core lab upload</td><td class="zero">0.00</td><td class="zero">0.00</td><td>200.00</td><td>200.00</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Zeros are deliberate: a party can be on a contract and still earn nothing for some items. A national-leader contract works the same way — one fee schedule covering several sites, in that country's currency.</p>
+
+<h2>What makes it more than a data pipeline</h2>
+<p>The interesting engineering is in turning contract rules into a model that can't drift out of sync with reality.</p>
+<ul class="rules">
+  <li><b>Contracts as versioned data</b><p>Fee schedules move from Draft to Published with semantic versions (<code>v1.0.0 → v1.1.0 → v2.0.0</code>). A change branches a single revision draft; publishing replaces the original, so there is always exactly one working version.</p></li>
+  <li><b>Point-in-time history</b><p>Open any published version and see the whole contract exactly as it was — years later. It replaces digging through a field-by-field audit log.</p></li>
+  <li><b>Invariants enforced by the domain</b><p>Every centre code belongs to exactly one fee schedule; a centre contract covers exactly one site; a party's country must match the contract; amounts can't be negative; items in use can't be deleted; parties are archived, never deleted.</p></li>
+  <li><b>Inputs people actually type</b><p>Centre scopes accept lists and overlapping ranges — <code>1,2,5-7,7-9</code> — are stored code by code, and echoed back normalized as <code>1, 2, 5-9</code> so typos are caught immediately.</p></li>
+  <li><b>People change, contracts don't</b><p>Replace Party swaps a departing coordinator for their successor on a revision and keeps every amount, then publishes it as a minor version with a dated description.</p></li>
+  <li><b>Pay institutions, not people</b><p>An organization-level vendor registry, aligned with the hospital's finance vendor rules. Parties from every study wait in a Pending queue and are mapped to an active vendor in the same country — deliberately a human step.</p></li>
+  <li><b>Source-agnostic by design</b><p>Payment criteria are defined against a common model, so the same fee schedule logic can be fed from DataFax, TrialMaster or REDCap instead of one bespoke report per system.</p></li>
+  <li><b>Guard-railed editing</b><p>Unsaved allocation changes block structural actions (add, remove, replace, publish), published schedules are read-only, and permissions are split by role — editing, archiving, party management and vendor management.</p></li>
+</ul>
+
+<h2>Roadmap</h2>
+<p>The configuration layer is in place; the parts that consume it are next.</p>
+<ol class="log">
+  <li class="is-next"><span class="when">In progress</span><b>Payment run engine</b><p>Take completed visits, find the fee schedule that applies to each site, and produce payable amounts — reproducibly, against the exact contract version in force.</p></li>
+  <li class="is-next"><span class="when">Next</span><b>Criteria reports</b><p>Link each payable item to the source report that proves it was earned, across DataFax, TrialMaster and REDCap.</p></li>
+  <li class="is-next"><span class="when">Planned</span><b>Payment status &amp; vendor totals</b><p>Paid / pending status per participant, and running totals per vendor across studies to flag when an institution crosses the fiscal-audit threshold.</p></li>
+</ol>
+
+<h2>Project log</h2>
+<ol class="log">
+  <li class="is-done"><time datetime="2026-10">Oct 2026</time><b>Stakeholder walkthrough</b><p>End-to-end demo of the payable item → party → vendor chain, with a test plan of every validation rule for QA.</p></li>
+  <li class="is-done"><time datetime="2026-10">Oct 2026</time><b>Replace Party shipped</b><p>Staff turnover handled on a revision without re-entering any amounts.</p></li>
+  <li class="is-done"><span class="when">2026</span><b>Contract model in place</b><p>Payable items, payment criteria, parties, fee schedules with versioning and history, and the organization vendor registry.</p></li>
+</ol>
+
+<h2>Built with</h2>
+<ul class="chips" aria-label="Technologies"><li class="chip">C# / .NET</li><li class="chip">SQL Server</li><li class="chip">T-SQL</li><li class="chip">SSIS</li><li class="chip">DataFax</li><li class="chip">TrialMaster</li><li class="chip">REDCap</li><li class="chip">Domain modeling</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <nav class="container cs-next" aria-label="More projects">
+      <a class="card" href="polarbeardip.html"><span class="dir">← Previous</span><span class="ttl">Polar Bear Dip Event PWA</span></a>
+      <a class="card" href="d3map.html"><span class="dir">Next →</span><span class="ttl">D3.js World Impact Map</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Xuanchen (Jason) Liu</p>
+      <nav aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../#projects">All projects</a>
+        <a href="https://github.com/Xuanchen97" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/xuanchen-liu-jason/" target="_blank" rel="noopener">LinkedIn</a>
+        <button type="button" data-cmdk>Search <span class="kbd" data-cmdk-key aria-hidden="true">⌘K</span></button>
+      </nav>
+    </div>
+    <p class="footer-wordmark" aria-hidden="true">Jason Liu</p>
+  </footer>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

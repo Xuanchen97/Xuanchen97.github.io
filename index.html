@@ -95,7 +95,7 @@
           "skills": "SQL, T-SQL, SSIS, ETL, SQL Server, Oracle, MySQL, C#, .NET, Python, FastAPI, JavaScript, TypeScript, React, Vue, REST APIs, Azure DevOps, Git"
         },
         "knowsAbout": [
-          "Clinical data management", "Clinical trials data", "ETL pipelines", "Data engineering", "SQL Server", "T-SQL", "SSIS",
+          "Clinical data management", "Clinical trials data", "Clinical trial site payments", "Legacy system modernization", "Domain-driven design", "REDCap", "ETL pipelines", "Data engineering", "SQL Server", "T-SQL", "SSIS",
           "Oracle Database", "MySQL", "C#", ".NET", "Python", "FastAPI", "REST API design", "React", "Vue.js", "TypeScript",
           "Full-stack web development", "Data visualization", "D3.js", "Azure DevOps", "Agile software development"
         ],
@@ -116,7 +116,7 @@
           {
             "@type": "Question",
             "name": "What does Jason Liu specialize in?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Clinical and healthcare data systems; ETL pipelines built with T-SQL and SSIS; integrating SQL Server, Oracle and MySQL data sources; back-end APIs in C# (.NET) and Python (FastAPI); and full-stack web applications with React, Vue and TypeScript." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Clinical and healthcare data systems, including modernizing legacy clinical-trial payment software; ETL pipelines built with T-SQL and SSIS; integrating SQL Server, Oracle and MySQL data sources; back-end APIs in C# (.NET) and Python (FastAPI); and full-stack web applications with React, Vue and TypeScript." }
           },
           {
             "@type": "Question",
@@ -131,7 +131,7 @@
           {
             "@type": "Question",
             "name": "What projects has Xuanchen (Jason) Liu built?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Highlights include a clinical payment data pipeline that unifies TrialMaster (SQL Server) and DataFax (MySQL) data for finance reporting, a participant-planning module that derives projected visit schedules for multi-site clinical trials, a D3.js world impact map, a Google Video Intelligence web app, and a Progressive Web App for World Vision Canada's Polar Bear Dip event." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Highlights include a site payments platform replacing a 20-year-old VB6 system for DataFax, TrialMaster and REDCap studies (in progress), a clinical payment data pipeline that unifies TrialMaster (SQL Server) and DataFax (MySQL) data for finance reporting, a participant-planning module that derives projected visit schedules for multi-site clinical trials, a D3.js world impact map, a Google Video Intelligence web app, and a Progressive Web App for World Vision Canada's Polar Bear Dip event." }
           },
           {
             "@type": "Question",
@@ -256,7 +256,7 @@
           <ul class="stats" data-reveal style="--d:160ms">
             <li><p class="stat-num" data-count="5">5<sup>+</sup></p><p class="stat-label">Years building software</p></li>
             <li><p class="stat-num" data-count="3">3</p><p class="stat-label">Sectors</p></li>
-            <li><p class="stat-num" data-count="8">8</p><p class="stat-label">Selected projects</p></li>
+            <li><p class="stat-num" data-count="9">9</p><p class="stat-label">Selected projects</p></li>
           </ul>
         </header>
 
@@ -360,6 +360,7 @@
               <h3 class="role-title">Solutions Developer</h3>
               <p class="role-org">Hamilton Health Sciences <span>· Population Health Research Institute (PHRI)</span></p>
               <ul class="role-points">
+                <li>Part of the team replacing a 20-year-old VB6 site-payment system with a modern platform that models site contracts as versioned data and supports DataFax, TrialMaster and REDCap studies.</li>
                 <li>Worked closely with study teams and finance stakeholders to understand complex clinical payment rules, clarify requirements, and translate them into reliable SQL-based data processing logic.</li>
                 <li>Identified gaps and inconsistencies in legacy payment workflows (Excel tracking and undocumented SQL), and helped standardize and reconstruct the data pipeline for improved accuracy and maintainability.</li>
                 <li>Developed and executed SSIS packages to synchronize data between SQL Server and Oracle systems, ensuring consistency across heterogeneous data sources.</li>
@@ -424,10 +425,87 @@
             <p class="eyebrow" data-reveal><span class="idx">03</span> Projects</p>
             <h2 class="section-title" id="projects-title" data-reveal style="--d:80ms">Things I've <em>built</em>.</h2>
           </div>
-          <p class="section-intro" data-reveal style="--d:160ms">Two recent pieces of clinical data work, followed by earlier full-stack, visualization and web-app projects.</p>
+          <p class="section-intro" data-reveal style="--d:160ms">Clinical data work first — including a platform rebuild that is still in progress — followed by earlier full-stack, visualization and web-app projects.</p>
         </header>
 
         <article class="card feature" data-reveal>
+          <div class="feature-visual">
+            <svg viewBox="0 0 520 320" role="img" aria-labelledby="fp0-title" xmlns="http://www.w3.org/2000/svg" font-family="Geist Mono, ui-monospace, monospace">
+              <title id="fp0-title">DataFax, TrialMaster and REDCap feed shared payment criteria, which price a versioned fee schedule that pays one hospital vendor — replacing a 20-year-old VB6 system.</title>
+              <defs>
+                <pattern id="fp0-dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#fff" opacity=".07"/></pattern>
+              </defs>
+              <rect width="520" height="320" fill="url(#fp0-dots)"/>
+              <text x="16" y="28" font-size="10" fill="#80858f" letter-spacing="1.5">SITE_PAYMENTS_PLATFORM</text>
+              <circle cx="420" cy="24.5" r="3" fill="#c6ff4d" class="pulse-node"/>
+              <text x="504" y="28" font-size="10" fill="#c6ff4d" text-anchor="end">in progress</text>
+
+              <g fill="none" stroke-width="1.5">
+                <path d="M126 84 C 146 84, 136 150, 156 150" stroke="#ff6b57" opacity=".25"/>
+                <path class="flow" d="M126 84 C 146 84, 136 150, 156 150" stroke="#ff6b57"/>
+                <path d="M126 160 H 156" stroke="#ff6b57" opacity=".25"/>
+                <path class="flow" d="M126 160 H 156" stroke="#ff6b57"/>
+                <path d="M126 236 C 146 236, 136 170, 156 170" stroke="#ff6b57" opacity=".25"/>
+                <path class="flow" d="M126 236 C 146 236, 136 170, 156 170" stroke="#ff6b57"/>
+                <path d="M276 160 C 292 160, 290 112, 306 112" stroke="#c6ff4d" opacity=".25"/>
+                <path class="flow" d="M276 160 C 292 160, 290 112, 306 112" stroke="#c6ff4d"/>
+                <path d="M405 172 V 208" stroke="#c6ff4d" opacity=".25"/>
+                <path class="flow slow" d="M405 172 V 208" stroke="#c6ff4d"/>
+              </g>
+
+              <g font-size="11.5" fill="#eceef1">
+                <rect x="16" y="62" width="110" height="44" rx="10" fill="#101319" stroke="#ff6b57" stroke-opacity=".45"/>
+                <text x="28" y="82">DataFax</text><text x="28" y="97" font-size="9.5" fill="#80858f">EDC</text>
+                <rect x="16" y="138" width="110" height="44" rx="10" fill="#101319" stroke="#ff6b57" stroke-opacity=".45"/>
+                <text x="28" y="158">TrialMaster</text><text x="28" y="173" font-size="9.5" fill="#80858f">EDC</text>
+                <rect x="16" y="214" width="110" height="44" rx="10" fill="#101319" stroke="#ff6b57" stroke-opacity=".45"/>
+                <text x="28" y="234">REDCap</text><text x="28" y="249" font-size="9.5" fill="#80858f">EDC</text>
+              </g>
+
+              <rect x="156" y="122" width="120" height="76" rx="12" fill="#12170b" stroke="#c6ff4d"/>
+              <text x="216" y="152" text-anchor="middle" font-size="11.5" fill="#c6ff4d">Payment</text>
+              <text x="216" y="167" text-anchor="middle" font-size="11.5" fill="#c6ff4d">Criteria</text>
+              <text x="216" y="185" text-anchor="middle" font-size="9.5" fill="#a4a9b6">earned?</text>
+
+              <rect x="306" y="52" width="198" height="120" rx="12" fill="#101319" stroke="#c6ff4d" stroke-opacity=".5"/>
+              <text x="320" y="74" font-size="11" fill="#eceef1">Fee Schedule</text>
+              <text x="490" y="74" font-size="9.5" fill="#c6ff4d" text-anchor="end">v1.1.0</text>
+              <g font-size="9" fill="#80858f">
+                <text x="320" y="96">item</text><text x="412" y="96" text-anchor="end">PI</text><text x="452" y="96" text-anchor="end">CRC</text><text x="492" y="96" text-anchor="end">Inst</text>
+              </g>
+              <line x1="320" y1="102" x2="492" y2="102" stroke="#fff" stroke-opacity=".1"/>
+              <g font-size="9.5" fill="#a4a9b6">
+                <text x="320" y="118">Random.</text><text x="412" y="118" text-anchor="end">600</text><text x="452" y="118" text-anchor="end">400</text><text x="492" y="118" text-anchor="end">500</text>
+              </g>
+              <rect x="314" y="125" width="182" height="17" rx="4" fill="#c6ff4d" opacity=".12"/>
+              <g font-size="9.5" fill="#c6ff4d">
+                <text x="320" y="137">6-month</text><text x="412" y="137" text-anchor="end">150</text><text x="452" y="137" text-anchor="end">150</text><text x="492" y="137" text-anchor="end">100</text>
+              </g>
+              <g font-size="9.5" fill="#a4a9b6">
+                <text x="320" y="158">Final</text><text x="412" y="158" text-anchor="end">200</text><text x="452" y="158" text-anchor="end">200</text><text x="492" y="158" text-anchor="end">100</text>
+              </g>
+
+              <rect x="306" y="208" width="198" height="56" rx="10" fill="#101319" stroke="#c6ff4d" stroke-opacity=".45"/>
+              <text x="320" y="232" font-size="11.5" fill="#eceef1">Vendor · Hospital</text>
+              <text x="320" y="250" font-size="9.5" fill="#80858f">one payment · 400.00 CAD</text>
+
+              <text x="16" y="300" font-size="10" fill="#5c616d" letter-spacing=".5">replaces a VB6 system in use for 20+ years</text>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <p class="feature-kicker"><span><span class="live-dot" aria-hidden="true"></span>Featured · In progress</span> <span class="feature-date">2026 — Present</span></p>
+            <h3>Site Payments Platform</h3>
+            <p>Our team is replacing a VB6 system that has calculated clinical-trial site payments for over 20 years. The new platform models each site contract as versioned data — payable items, payment criteria, parties, fee schedules and vendors — so studies from DataFax, TrialMaster and REDCap are priced and paid the same way, with a point-in-time history of every agreement.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li class="chip">C# / .NET</li><li class="chip">SQL Server</li><li class="chip">Domain modeling</li><li class="chip">DataFax · TrialMaster · REDCap</li>
+            </ul>
+            <a class="feature-link" href="projects/site-payments.html">Read the case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="card feature is-reverse" data-reveal>
           <div class="feature-visual">
             <svg viewBox="0 0 520 320" role="img" aria-labelledby="fp1-title" xmlns="http://www.w3.org/2000/svg" font-family="Geist Mono, ui-monospace, monospace">
               <title id="fp1-title">Pipeline diagram: TrialMaster (SQL Server) and DataFax (MySQL) feed a T-SQL / SSIS transform, then validation rules, then finance payment reports.</title>
@@ -493,7 +571,7 @@
           </div>
         </article>
 
-        <article class="card feature is-reverse" data-reveal>
+        <article class="card feature" data-reveal>
           <div class="feature-visual">
             <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fp2-title">
               <title id="fp2-title">Participant timeline: completed, derived, scheduled and missed visits for five participants, with projected visits derived from the FPFV anchor.</title>
@@ -695,7 +773,7 @@
           </details>
           <details class="faq-item">
             <summary>What does Jason specialize in?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Clinical and healthcare data systems; ETL pipelines built with T-SQL and SSIS; integrating SQL Server, Oracle and MySQL data sources; back-end APIs in C# (.NET) and Python (FastAPI); and full-stack web applications with React, Vue and TypeScript.</p></div>
+            <div class="faq-answer"><p>Clinical and healthcare data systems, including modernizing legacy clinical-trial payment software; ETL pipelines built with T-SQL and SSIS; integrating SQL Server, Oracle and MySQL data sources; back-end APIs in C# (.NET) and Python (FastAPI); and full-stack web applications with React, Vue and TypeScript.</p></div>
           </details>
           <details class="faq-item">
             <summary>Where has he worked?<span class="faq-icon" aria-hidden="true"></span></summary>
@@ -707,7 +785,7 @@
           </details>
           <details class="faq-item">
             <summary>What has he built?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Highlights include a clinical payment data pipeline that unifies TrialMaster (SQL Server) and DataFax (MySQL) data for finance reporting, a participant-planning module that derives projected visit schedules for multi-site clinical trials, a <a href="projects/d3map.html">D3.js world impact map</a>, a <a href="projects/videointellignece.html">Google Video Intelligence web app</a>, and a <a href="projects/polarbeardip.html">Progressive Web App</a> for World Vision Canada's Polar Bear Dip event.</p></div>
+            <div class="faq-answer"><p>Highlights include a <a href="projects/site-payments.html">site payments platform</a> replacing a 20-year-old VB6 system (in progress), a clinical payment data pipeline that unifies TrialMaster (SQL Server) and DataFax (MySQL) data for finance reporting, a participant-planning module that derives projected visit schedules for multi-site clinical trials, a <a href="projects/d3map.html">D3.js world impact map</a>, a <a href="projects/videointellignece.html">Google Video Intelligence web app</a>, and a <a href="projects/polarbeardip.html">Progressive Web App</a> for World Vision Canada's Polar Bear Dip event.</p></div>
           </details>
           <details class="faq-item">
             <summary>How can I contact Jason?<span class="faq-icon" aria-hidden="true"></span></summary>
@@ -745,7 +823,7 @@
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-year>2026</span> Xuanchen (Jason) Liu · Hand-built, no frameworks</p>
+      <p>© <span data-year>2026</span> Xuanchen (Jason) Liu</p>
       <nav aria-label="Footer">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>

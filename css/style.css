@@ -896,3 +896,65 @@ body::after {
 .nf-line circle { fill: var(--coral); animation: blink 1s step-end infinite 3.2s; opacity: 0; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .nf-line path { stroke-dashoffset: 0; } .nf-line circle { opacity: 1; } }
+
+/* ==========================================================================
+   Case-study components: chain diagram, data table, callout, project log
+   ========================================================================== */
+.live-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: 1px; position: relative; }
+.live-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: ping 2.2s var(--ease) infinite; }
+
+.prose > .chain, .prose > .table-wrap, .prose > .log { max-width: none; }
+.chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 32px 0 40px; counter-reset: step; }
+.chain li { position: relative; padding: 20px 18px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--card); }
+.chain li:not(:last-child)::after {
+  content: ""; position: absolute; top: 50%; right: -12px; width: 10px; height: 10px; z-index: 1;
+  border-top: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); transform: translateY(-50%) rotate(45deg);
+}
+.chain .q { display: block; font: 500 11.5px var(--font-mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+.chain b { display: block; margin-top: 10px; font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
+.chain p { margin: 8px 0 0; font-size: 14px; line-height: 1.55; }
+.chain li.is-key { border-color: rgba(198, 255, 77, 0.45); background: linear-gradient(180deg, var(--accent-soft), transparent); }
+
+.callout { margin: 28px 0 36px; padding: 22px 24px; border-radius: var(--radius-sm); border: 1px solid var(--line-2); border-left: 3px solid var(--accent); background: rgba(255, 255, 255, 0.03); }
+.callout p { margin: 0; color: var(--text); font-size: 17px; }
+.callout p + p { margin-top: 10px; color: var(--text-2); font-size: 14.5px; }
+
+.table-wrap { margin: 28px 0 12px; overflow-x: auto; border-radius: var(--radius-sm); border: 1px solid var(--line); }
+.data-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14.5px; }
+.data-table caption { caption-side: bottom; padding: 12px 16px; text-align: left; font: 500 12.5px var(--font-mono); color: var(--text-3); border-top: 1px solid var(--line); }
+.data-table th, .data-table td { padding: 11px 16px; text-align: right; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.data-table th:first-child, .data-table td:first-child { text-align: left; }
+.data-table thead th { font-weight: 500; color: var(--text); background: rgba(255, 255, 255, 0.03); vertical-align: bottom; }
+.data-table thead th small { display: block; font: 500 11px var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); }
+.data-table tbody tr:hover { background: rgba(255, 255, 255, 0.02); }
+.data-table tr.is-hl td { color: var(--accent); background: var(--accent-soft); }
+.data-table tfoot td { font-weight: 600; color: var(--text); border-bottom: 0; }
+.data-table .zero { color: var(--text-3); }
+
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 28px 0 40px; }
+.prose > .rules { max-width: none; }
+.rules li { padding: 20px 22px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--card); }
+.rules b { display: block; color: var(--text); font-size: 16.5px; letter-spacing: -0.015em; }
+.rules p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.6; }
+.rules code { font: 500 13px var(--font-mono); color: var(--accent); }
+
+.log { position: relative; margin: 28px 0 40px; padding-left: 28px; }
+.log::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line-2); }
+.log li { position: relative; padding-bottom: 26px; }
+.log li:last-child { padding-bottom: 0; }
+.log li::before { content: ""; position: absolute; left: -28px; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-2); }
+.log li.is-next::before { border-style: dashed; }
+.log li.is-done::before { border-color: var(--accent); background: var(--accent); }
+.log time, .log .when { font: 500 12.5px var(--font-mono); color: var(--text-3); }
+.log b { display: block; margin-top: 4px; color: var(--text); font-size: 16.5px; }
+.log p { margin: 6px 0 0; font-size: 15px; }
+
+.feature-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font: 500 14px var(--font-sans); color: var(--accent); }
+.feature-link svg { width: 16px; height: 16px; transition: transform 0.25s var(--ease); }
+.feature-link:hover svg { transform: translateX(3px); }
+
+@media (max-width: 920px) {
+  .chain { grid-template-columns: 1fr; gap: 12px; }
+  .chain li:not(:last-child)::after { top: auto; bottom: -11px; right: auto; left: 28px; transform: rotate(135deg); }
+  .rules { grid-template-columns: 1fr; }
+}

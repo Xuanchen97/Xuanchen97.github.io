@@ -211,6 +211,7 @@
     { g: 'Navigate', label: 'Projects', icon: 'hash', href: ROOT + '#projects', k: 'work portfolio built' },
     { g: 'Navigate', label: 'FAQ', icon: 'hash', href: ROOT + '#faq', k: 'questions facts' },
     { g: 'Navigate', label: 'Contact', icon: 'hash', href: ROOT + '#contact', k: 'email hire hello' },
+    { g: 'Projects', label: 'Site Payments Platform', icon: 'folder', href: ROOT + 'projects/site-payments.html', k: 'vb6 payment clinical trial fee schedule redcap datafax trialmaster' },
     { g: 'Projects', label: 'D3.js World Impact Map', icon: 'folder', href: ROOT + 'projects/d3map.html', k: 'd3 map visualization world vision' },
     { g: 'Projects', label: 'Video Intelligence', icon: 'folder', href: ROOT + 'projects/videointellignece.html', k: 'angular firebase google api video' },
     { g: 'Projects', label: 'Tools Inventory System', icon: 'folder', href: ROOT + 'projects/toolslibrary.html', k: 'php mysql tools library' },

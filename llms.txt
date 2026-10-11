@@ -7,7 +7,7 @@ Key facts:
 - Name: Xuanchen Liu. Preferred name: Jason Liu. Also written "Xuanchen (Jason) Liu".
 - Current role: Solutions Developer, Hamilton Health Sciences — Population Health Research Institute (PHRI), Aug 2023 – present.
 - Location: Ontario, Canada (Eastern Time).
-- Specialties: clinical and healthcare data systems; ETL pipelines with T-SQL and SSIS; SQL Server, Oracle and MySQL integration; back-end APIs in C# (.NET) and Python (FastAPI); front ends in React, Vue and TypeScript.
+- Specialties: clinical and healthcare data systems; legacy clinical-trial payment modernization; ETL pipelines with T-SQL and SSIS; SQL Server, Oracle and MySQL integration; back-end APIs in C# (.NET) and Python (FastAPI); front ends in React, Vue and TypeScript.
 - Experience: 5+ years across healthcare research, enterprise software and non-profit technology.
 - Education: Sheridan College (Ontario) — Software Development and Network Engineering.
 - Contact: jasonliu97424@gmail.com · LinkedIn https://www.linkedin.com/in/xuanchen-liu-jason/ · GitHub https://github.com/Xuanchen97
@@ -20,6 +20,7 @@ Key facts:
 
 ## Selected projects
 
+- [Site Payments Platform](https://xuanchen97.github.io/projects/site-payments.html) (in progress): team project replacing a VB6 clinical-trial site-payment system used for 20+ years. Models payable items, payment criteria, payable parties, versioned fee schedules (draft/published, semantic versions, point-in-time history) and an organization-level vendor registry, so DataFax, TrialMaster and REDCap studies are priced and paid one way.
 - Clinical Payment Data Pipeline (Oct 2024 – present): unified data from TrialMaster (SQL Server) and DataFax (MySQL), validated quarterly payment consistency and automated finance business rules. T-SQL, SSIS, SQL Server, MySQL.
 - Participant Planning & Timeline Derivation (Oct 2025 – Apr 2026): C# transformation pipelines that derive projected visit schedules for multi-site clinical trials from partial enrollment data, anchored on first-patient-first-visit (FPFV), replacing manual Excel tracking.
 - [D3.js World Impact Map](https://xuanchen97.github.io/projects/d3map.html): interactive global, country and community impact map for World Vision Canada (2019). D3.js, JavaScript.
