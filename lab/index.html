@@ -1,237 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab — Jason Liu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lab · Jason Liu</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#07080b">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
   <style>
-    :root {
-      --navy:          #0a192f;
-      --light-navy:    #112240;
-      --lightest-navy: #233554;
-      --slate:         #8892b0;
-      --light-slate:   #a8b2d8;
-      --lightest-slate:#ccd6f6;
-      --green:         #64ffda;
-      --green-tint:    rgba(100,255,218,0.1);
-      --font-sans: 'Inter', -apple-system, sans-serif;
-      --font-mono: 'Fira Code', monospace;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: var(--font-sans);
-      background: var(--navy);
-      color: var(--slate);
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 40px;
-      border-bottom: 1px solid var(--lightest-navy);
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .back-link {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--slate);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-    }
-
-    .back-link:hover { color: var(--green); }
-    .back-link svg { width: 16px; height: 16px; }
-
-    .divider { width: 1px; height: 18px; background: var(--lightest-navy); }
-
-    .lab-title {
-      font-family: var(--font-mono);
-      font-size: 14px;
-      color: var(--green);
-    }
-
-    .header-tag {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--slate);
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-
-    .page-heading {
-      margin-bottom: 8px;
-    }
-
-    .page-heading h1 {
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--lightest-slate);
-    }
-
-    .page-heading p {
-      font-size: 14px;
-      color: var(--slate);
-      margin-top: 6px;
-      font-family: var(--font-mono);
-    }
-
-    .category {
-      margin-top: 48px;
-    }
-
-    .category-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--green);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--lightest-navy);
-    }
-
-    .notes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 14px;
-    }
-
-    .note-card {
-      background: var(--light-navy);
-      border: 1px solid var(--lightest-navy);
-      border-radius: 6px;
-      padding: 20px;
-      text-decoration: none;
-      display: block;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    }
-
-    .note-card:hover {
-      border-color: var(--green);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px -10px rgba(2,12,27,0.7);
-    }
-
-    .note-card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .note-icon {
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    .note-tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      padding: 2px 8px;
-      border-radius: 99px;
-      border: 1px solid var(--lightest-navy);
-      color: var(--slate);
-    }
-
-    .note-card h3 {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--lightest-slate);
-      margin-bottom: 6px;
-      transition: color 0.2s;
-    }
-
-    .note-card:hover h3 { color: var(--green); }
-
-    .note-card p {
-      font-size: 13px;
-      color: var(--slate);
-      line-height: 1.5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0 24px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--lightest-navy);
-    }
-
-    @media (max-width: 600px) {
-      header { padding: 14px 20px; }
-      main { padding: 32px 16px; }
-    }
+    .lab { position: relative; isolation: isolate; padding: calc(var(--nav-h) + 72px) 0 96px; min-height: 100vh; }
+    .lab-category { margin-top: 56px; }
+    .lab-category h2 { font: 500 12px var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); padding-bottom: 12px; margin-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .note-card { display: block; padding: 24px; }
+    .note-card:hover { transform: translateY(-3px); }
+    .note-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .note-icon { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+    .note-icon svg { width: 18px; height: 18px; }
+    .note-card h3 { font-size: 18px; letter-spacing: -0.02em; transition: color 0.2s; }
+    .note-card:hover h3 { color: var(--accent); }
+    .note-card p { margin-top: 8px; font-size: 14.5px; }
+    .lab-foot { margin-top: 72px; font: 500 12px var(--font-mono); color: var(--text-3); }
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="header-left">
-      <a href="../index.html" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        Home
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13h4.5l2.2-5.5 3.6 11 2.6-8 1.6 2.5H22"/></svg></span>
+        <span>Jason Liu <span class="brand-sub">/ lab</span></span>
       </a>
-      <div class="divider"></div>
-      <span class="lab-title">/ lab</span>
+      <div class="nav-actions">
+        <span class="kbd">private</span>
+      </div>
     </div>
-    <span class="header-tag">private</span>
   </header>
 
-  <main>
-    <div class="page-heading">
-      <h1>Notes & Playbooks</h1>
-      <p>// personal study notes — not indexed</p>
+  <main class="lab" id="main">
+    <div class="bg-aurora" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow"><span class="idx">//</span> Lab</p>
+      <h1 class="section-title">Notes &amp; <em>playbooks</em>.</h1>
+      <p class="section-intro" style="margin-top:18px">Personal study notes — not linked, not indexed.</p>
+
+      <section class="lab-category" aria-labelledby="cat-data">
+        <h2 id="cat-data">Data &amp; Analytics</h2>
+        <div class="notes-grid">
+          <a href="notes/eda_interview_playbook.html" class="card note-card">
+            <div class="note-top">
+              <span class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+              <span class="chip">Python · Data</span>
+            </div>
+            <h3>EDA Interview Playbook</h3>
+            <p>5-step analysis framework, full code template, how to talk through findings, and a pre-interview checklist.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Add more categories here as you collect more notes, e.g.:
+      <section class="lab-category" aria-labelledby="cat-sql">
+        <h2 id="cat-sql">SQL &amp; Databases</h2>
+        <div class="notes-grid"> … </div>
+      </section>
+      -->
+
+      <p class="lab-foot">not linked · not indexed · just mine</p>
     </div>
-
-    <div class="category">
-      <div class="category-label">Data & Analytics</div>
-      <div class="notes-grid">
-
-        <a href="notes/eda_interview_playbook.html" class="note-card">
-          <div class="note-card-top">
-            <span class="note-icon">📊</span>
-            <span class="note-tag">Python · Data</span>
-          </div>
-          <h3>EDA Interview Playbook</h3>
-          <p>5-step analysis framework, full code template, how to talk through findings, and a pre-interview checklist.</p>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- Add more categories here as you collect more notes -->
-    <!-- Example:
-    <div class="category">
-      <div class="category-label">SQL & Databases</div>
-      <div class="notes-grid">
-        ...
-      </div>
-    </div>
-    -->
-
   </main>
-
-  <footer>not linked · not indexed · just mine</footer>
-
 </body>
 </html>

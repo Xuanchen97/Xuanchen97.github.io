@@ -1,0 +1,15 @@
+{
+  "name": "Xuanchen (Jason) Liu",
+  "short_name": "Jason Liu",
+  "description": "Solutions Developer & Data Engineer in Ontario, Canada — clinical data systems, ETL pipelines and full-stack apps.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07080b",
+  "theme_color": "#07080b",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://xuanchen97.github.io/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/jason.webp</image:loc></image:image>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/og-image.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://xuanchen97.github.io/projects/d3map.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/thumb-d3map.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://xuanchen97.github.io/projects/videointellignece.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/thumb-videointelligence.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://xuanchen97.github.io/projects/toolslibrary.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/thumb-toolslibrary.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://xuanchen97.github.io/projects/uzooka.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/thumb-uzooka.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://xuanchen97.github.io/projects/polarbeardip.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image><image:loc>https://xuanchen97.github.io/assets/img/thumb-polarbeardip.webp</image:loc></image:image>
+  </url>
+</urlset>
